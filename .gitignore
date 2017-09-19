@@ -19,3 +19,4 @@ angular2/ng1qs/node_modules/
 .idea/vcs.xml
 .idea/workspace.xml
 .vscode/launch.json
+.DS_Store
