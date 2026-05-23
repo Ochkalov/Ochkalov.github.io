@@ -1,0 +1,529 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - link "Yurii Ochkalov home" [ref=e5] [cursor=pointer]:
+      - /url: "#home"
+      - text: YO
+    - navigation "Primary navigation" [ref=e6]:
+      - link "Home" [ref=e7] [cursor=pointer]:
+        - /url: "#home"
+        - img [ref=e8]
+      - link "Overview" [ref=e11] [cursor=pointer]:
+        - /url: "#overview"
+        - img [ref=e12]
+      - link "Impact" [ref=e15] [cursor=pointer]:
+        - /url: "#impact"
+        - img [ref=e16]
+      - link "AI Fluency" [ref=e18] [cursor=pointer]:
+        - /url: "#ai-fluency"
+        - img [ref=e19]
+      - link "Skills" [ref=e22] [cursor=pointer]:
+        - /url: "#skills"
+        - img [ref=e23]
+      - link "Experience" [ref=e26] [cursor=pointer]:
+        - /url: "#experience"
+        - img [ref=e27]
+      - link "Projects" [ref=e31] [cursor=pointer]:
+        - /url: "#projects"
+        - img [ref=e32]
+      - link "Contact" [ref=e37] [cursor=pointer]:
+        - /url: "#contact"
+        - img [ref=e38]
+    - generic [ref=e41]:
+      - generic [ref=e42]:
+        - link "Connect with Yurii Ochkalov on LinkedIn" [ref=e43] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/ochkalov
+          - generic [ref=e44]: in
+        - link "View Yurii Ochkalov GitHub profile placeholder" [ref=e45] [cursor=pointer]:
+          - /url: https://github.com/YOUR_GITHUB_USERNAME
+          - img [ref=e46]
+      - paragraph [ref=e50]:
+        - img [ref=e51]
+        - text: New York, USA
+  - main [ref=e54]:
+    - generic [ref=e56]:
+      - generic [ref=e57]:
+        - generic [ref=e58]:
+          - paragraph [ref=e59]: Senior Software Engineer
+          - heading "I build scalable software systems that create measurable impact." [level=1] [ref=e61]
+          - paragraph [ref=e62]: 10+ years delivering enterprise web, backend, and mobile applications across finance, banking, retail, healthcare, warehouse management, and media.
+          - generic [ref=e63]:
+            - link "View My Work" [ref=e64] [cursor=pointer]:
+              - /url: "#projects"
+              - generic [ref=e65]: View My Work
+              - img [ref=e67]
+            - link "View Experience" [ref=e69] [cursor=pointer]:
+              - /url: "#experience"
+              - generic [ref=e70]: View Experience
+              - img [ref=e72]
+            - link "Connect with Yurii Ochkalov on LinkedIn" [ref=e76] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/ochkalov
+              - generic [ref=e77]: Connect on LinkedIn
+              - img [ref=e79]
+        - generic [ref=e83]:
+          - generic [ref=e97]: AI-Assisted Engineering
+          - generic [ref=e99]: Full-Stack Delivery
+          - generic [ref=e101]: Enterprise Architecture
+          - generic [ref=e103]: Data-Driven Systems
+          - generic [ref=e105]: API Integration
+      - generic [ref=e107]:
+        - generic [ref=e108]:
+          - img [ref=e110]
+          - generic [ref=e120]:
+            - paragraph [ref=e121]:
+              - generic [ref=e122]: 0+
+            - paragraph [ref=e123]: Years Experience
+        - generic [ref=e124]:
+          - img [ref=e126]
+          - generic [ref=e128]:
+            - paragraph [ref=e129]:
+              - generic [ref=e130]: 0+
+            - paragraph [ref=e131]: Project Contributions
+        - generic [ref=e132]:
+          - img [ref=e134]
+          - generic [ref=e138]:
+            - paragraph [ref=e139]:
+              - generic [ref=e140]: 0+
+            - paragraph [ref=e141]: Engineering Teams Collaborated
+        - generic [ref=e142]:
+          - img [ref=e144]
+          - generic [ref=e148]:
+            - paragraph [ref=e149]: "0"
+            - paragraph [ref=e150]: Greenfield Micro-frontends
+        - generic [ref=e151]:
+          - img [ref=e153]
+          - generic [ref=e158]:
+            - paragraph [ref=e159]: 0 → Prod
+            - paragraph [ref=e160]: Production Delivery
+        - generic [ref=e161]:
+          - img [ref=e163]
+          - generic [ref=e175]:
+            - paragraph [ref=e176]: AI
+            - paragraph [ref=e177]: AI-Assisted Engineering
+    - generic [ref=e179]:
+      - heading "Engineering Brief" [level=2] [ref=e181]
+      - generic [ref=e183]:
+        - img [ref=e185]
+        - generic [ref=e188]:
+          - paragraph [ref=e189]: Senior Software Engineer with 10+ years of experience designing, building, and modernizing enterprise web, backend, and mobile applications across finance, banking, retail, healthcare, warehouse management, and media domains.
+          - paragraph [ref=e190]: Strong frontend engineering depth with practical full-stack delivery experience across Angular, React, TypeScript, JavaScript, Node.js, Express, REST APIs, .NET Web APIs, C#, Java/Spring Boot-based services, SQL Server, cloud platforms, and CI/CD.
+          - paragraph [ref=e191]: Known for translating complex business workflows into scalable, maintainable software solutions, collaborating across product, UX, backend, QA, and multiple engineering teams, and applying AI-assisted engineering workflows to accelerate discovery, implementation, debugging, refactoring, testing, and documentation while maintaining production-quality standards.
+      - generic [ref=e192]:
+        - generic [ref=e194]:
+          - img [ref=e196]
+          - heading "Full-Stack Feature Delivery" [level=3] [ref=e202]
+        - generic [ref=e204]:
+          - img [ref=e206]
+          - heading "Enterprise Frontend Architecture" [level=3] [ref=e210]
+        - generic [ref=e212]:
+          - img [ref=e214]
+          - heading "Data-Intensive Applications" [level=3] [ref=e218]
+        - generic [ref=e220]:
+          - img [ref=e222]
+          - heading "Production Quality & Reliability" [level=3] [ref=e225]
+    - generic [ref=e227]:
+      - generic [ref=e228]:
+        - heading "How I Create Impact" [level=2] [ref=e229]
+        - paragraph [ref=e230]: General career impact themes across enterprise delivery, frontend architecture, API integration, product collaboration, and AI-assisted engineering.
+      - generic [ref=e231]:
+        - article [ref=e232]:
+          - generic [ref=e234]:
+            - img [ref=e236]
+            - generic [ref=e241]:
+              - heading "0 → Production Delivery" [level=3] [ref=e242]
+              - paragraph [ref=e243]: Delivered greenfield systems and business capabilities from initial implementation to production release, including micro-frontends, backend-integrated workflows, validation, testing, and rollout readiness.
+              - paragraph [ref=e244]:
+                - generic [ref=e245]: 0 → Prod Delivery
+        - article [ref=e246]:
+          - generic [ref=e248]:
+            - img [ref=e250]
+            - generic [ref=e254]:
+              - heading "Enterprise Feature Ownership" [level=3] [ref=e255]
+              - paragraph [ref=e256]: Owned complex enterprise features across frontend implementation, backend/API integration, validation, data mapping, error handling, testing, and release readiness.
+        - article [ref=e257]:
+          - generic [ref=e259]:
+            - img [ref=e261]
+            - generic [ref=e265]:
+              - heading "Micro-Frontend Architecture" [level=3] [ref=e266]
+              - paragraph [ref=e267]: Built modular frontend systems using Module Federation / Native Federation, shared libraries, reusable patterns, and independently deployable business capabilities.
+              - paragraph [ref=e268]:
+                - generic [ref=e269]: 0 greenfield micro-frontends
+        - article [ref=e270]:
+          - generic [ref=e272]:
+            - img [ref=e274]
+            - generic [ref=e279]:
+              - heading "Data-Intensive UI Engineering" [level=3] [ref=e280]
+              - paragraph [ref=e281]: Built operational and analytical workflows with large datasets, advanced filtering, drill-down behavior, custom rendering, visualizations, and URL-driven reproducible state.
+              - paragraph [ref=e282]:
+                - generic [ref=e283]: 0+ attribute workflows
+        - article [ref=e284]:
+          - generic [ref=e286]:
+            - img [ref=e288]
+            - generic [ref=e290]:
+              - heading "Performance Modernization" [level=3] [ref=e291]
+              - paragraph [ref=e292]: Modernized legacy applications by improving architecture, state management, lazy loading, rendering performance, and maintainability.
+              - paragraph [ref=e293]:
+                - generic [ref=e294]: ~0s FCP improvement
+        - article [ref=e295]:
+          - generic [ref=e297]:
+            - img [ref=e299]
+            - generic [ref=e303]:
+              - heading "API & Backend Integration" [level=3] [ref=e304]
+              - paragraph [ref=e305]: Integrated RESTful APIs, OpenAPI/Swagger contracts, typed clients, service-layer interactions, request/response validation, and database-backed workflows.
+        - article [ref=e306]:
+          - generic [ref=e308]:
+            - img [ref=e310]
+            - generic [ref=e312]:
+              - heading "Cross-Platform Delivery" [level=3] [ref=e313]
+              - paragraph [ref=e314]: Delivered web, Android, and iOS functionality using Ionic, Cordova, Capacitor, iOS, Android, Xcode, Android Studio, TestFlight, and App Store delivery processes.
+        - article [ref=e315]:
+          - generic [ref=e317]:
+            - img [ref=e319]
+            - generic [ref=e322]:
+              - heading "Engineering Quality" [level=3] [ref=e323]
+              - paragraph [ref=e324]: Improved production readiness through code reviews, testing, debugging, API contract validation, defect resolution, CI/CD collaboration, and maintainable delivery practices.
+        - article [ref=e325]:
+          - generic [ref=e327]:
+            - img [ref=e329]
+            - generic [ref=e334]:
+              - heading "Technical Collaboration" [level=3] [ref=e335]
+              - paragraph [ref=e336]: Partnered across product, UX, backend, QA, architecture, and multiple engineering teams to align requirements, contracts, implementation standards, and release scope.
+              - paragraph [ref=e337]:
+                - generic [ref=e338]: 0 engineering teams
+        - article [ref=e339]:
+          - generic [ref=e341]:
+            - img [ref=e343]
+            - generic [ref=e355]:
+              - heading "AI-Assisted Engineering" [level=3] [ref=e356]
+              - paragraph [ref=e357]: Applied AI-assisted workflows to accelerate discovery, implementation, debugging, refactoring, test scaffolding, documentation, and code review preparation while preserving engineering judgment.
+    - generic [ref=e359]:
+      - generic [ref=e360]:
+        - heading "AI Fluency & Engineering Acceleration" [level=2] [ref=e361]
+        - paragraph [ref=e362]: AI-assisted engineering workflows are used to move faster without moving loosely.
+      - generic [ref=e363]:
+        - generic [ref=e364]:
+          - paragraph [ref=e365]: I use AI-assisted engineering workflows to accelerate discovery, implementation, debugging, refactoring, testing, documentation, and architectural exploration while keeping human review, code quality, and production safety at the center.
+          - generic [ref=e366]:
+            - generic [ref=e367]:
+              - generic [ref=e368]: "1"
+              - generic [ref=e369]: Problem
+              - img [ref=e370]
+            - generic [ref=e372]:
+              - generic [ref=e373]: "2"
+              - generic [ref=e374]: Context
+              - img [ref=e375]
+            - generic [ref=e377]:
+              - generic [ref=e378]: "3"
+              - generic [ref=e379]: AI-assisted exploration
+              - img [ref=e380]
+            - generic [ref=e382]:
+              - generic [ref=e383]: "4"
+              - generic [ref=e384]: Human review
+              - img [ref=e385]
+            - generic [ref=e387]:
+              - generic [ref=e388]: "5"
+              - generic [ref=e389]: Production-quality implementation
+          - paragraph [ref=e390]:
+            - img [ref=e391]
+            - text: AI is used as an engineering accelerator, not a replacement for architecture, ownership, or review.
+        - generic [ref=e394]:
+          - generic [ref=e396]:
+            - img [ref=e398]
+            - heading "GitHub Copilot" [level=3] [ref=e401]
+            - paragraph [ref=e402]: Editor-native assistance for implementation, refactoring, and code navigation.
+          - generic [ref=e404]:
+            - img [ref=e406]
+            - heading "OpenAI Codex" [level=3] [ref=e409]
+            - paragraph [ref=e410]: Repository-aware planning, implementation support, debugging, and verification workflows.
+          - generic [ref=e412]:
+            - img [ref=e414]
+            - heading "Cloud Code" [level=3] [ref=e417]
+            - paragraph [ref=e418]: AI-assisted development loops for context gathering and implementation acceleration.
+          - generic [ref=e420]:
+            - img [ref=e422]
+            - heading "Gemini-based workflows" [level=3] [ref=e434]
+            - paragraph [ref=e435]: Alternative model workflows for exploration, synthesis, and technical comparison.
+          - generic [ref=e437]:
+            - img [ref=e439]
+            - heading "AI-assisted debugging" [level=3] [ref=e443]
+            - paragraph [ref=e444]: Faster fault isolation, hypothesis generation, and reproduction planning.
+          - generic [ref=e446]:
+            - img [ref=e448]
+            - heading "Test scaffolding" [level=3] [ref=e451]
+            - paragraph [ref=e452]: Initial test outlines, edge-case discovery, and regression coverage prompts.
+          - generic [ref=e454]:
+            - img [ref=e456]
+            - heading "Refactoring support" [level=3] [ref=e460]
+            - paragraph [ref=e461]: Safe decomposition ideas, naming review, and maintainability checks.
+          - generic [ref=e463]:
+            - img [ref=e465]
+            - heading "Documentation acceleration" [level=3] [ref=e468]
+            - paragraph [ref=e469]: Readable technical summaries, onboarding notes, and implementation rationale.
+          - generic [ref=e471]:
+            - img [ref=e473]
+            - heading "Code review preparation" [level=3] [ref=e478]
+            - paragraph [ref=e479]: Diff summaries, risk checks, and review-ready explanation drafts.
+          - generic [ref=e481]:
+            - img [ref=e483]
+            - heading "Architecture exploration" [level=3] [ref=e488]
+            - paragraph [ref=e489]: Tradeoff mapping, interface sketches, and system-design alternatives.
+    - generic [ref=e491]:
+      - heading "Technical Stack" [level=2] [ref=e493]
+      - generic [ref=e494]:
+        - generic [ref=e496]:
+          - heading "Frontend" [level=3] [ref=e497]
+          - generic [ref=e498]:
+            - generic [ref=e499]: Angular
+            - generic [ref=e500]: React
+            - generic [ref=e501]: TypeScript
+            - generic [ref=e502]: JavaScript
+            - generic [ref=e503]: RxJS
+            - generic [ref=e504]: NgRx
+            - generic [ref=e505]: Redux Toolkit
+            - generic [ref=e506]: React Router
+            - generic [ref=e507]: React Hook Form
+            - generic [ref=e508]: Material UI
+            - generic [ref=e509]: Tailwind CSS
+            - generic [ref=e510]: Angular Material
+            - generic [ref=e511]: Bootstrap
+            - generic [ref=e512]: HTML5
+            - generic [ref=e513]: CSS3
+            - generic [ref=e514]: SCSS
+        - generic [ref=e516]:
+          - heading "Backend" [level=3] [ref=e517]
+          - generic [ref=e518]:
+            - generic [ref=e519]: Node.js
+            - generic [ref=e520]: Express.js
+            - generic [ref=e521]: REST APIs
+            - generic [ref=e522]: OpenAPI/Swagger
+            - generic [ref=e523]: .NET Web APIs
+            - generic [ref=e524]: C#
+            - generic [ref=e525]: Java/Spring Boot
+            - generic [ref=e526]: Maven
+            - generic [ref=e527]: SQL
+        - generic [ref=e529]:
+          - heading "Data & Visualization" [level=3] [ref=e530]
+          - generic [ref=e531]:
+            - generic [ref=e532]: Ag-Grid
+            - generic [ref=e533]: Highcharts
+            - generic [ref=e534]: Leaflet.js
+        - generic [ref=e536]:
+          - heading "Architecture" [level=3] [ref=e537]
+          - generic [ref=e538]:
+            - generic [ref=e539]: Micro-frontends
+            - generic [ref=e540]: Module Federation
+            - generic [ref=e541]: Native Federation
+            - generic [ref=e542]: Shared Libraries
+            - generic [ref=e543]: API Contracts
+            - generic [ref=e544]: Enterprise UI Architecture
+        - generic [ref=e546]:
+          - heading "Cloud & DevOps" [level=3] [ref=e547]
+          - generic [ref=e548]:
+            - generic [ref=e549]: AWS
+            - generic [ref=e550]: Azure
+            - generic [ref=e551]: Docker
+            - generic [ref=e552]: CI/CD
+            - generic [ref=e553]: Git
+            - generic [ref=e554]: GitHub
+            - generic [ref=e555]: Jira
+        - generic [ref=e557]:
+          - heading "Testing" [level=3] [ref=e558]
+          - generic [ref=e559]:
+            - generic [ref=e560]: Jest
+            - generic [ref=e561]: Cypress
+            - generic [ref=e562]: Jasmine
+            - generic [ref=e563]: Mocha
+            - generic [ref=e564]: Sinon.js
+        - generic [ref=e566]:
+          - heading "Mobile" [level=3] [ref=e567]
+          - generic [ref=e568]:
+            - generic [ref=e569]: Ionic
+            - generic [ref=e570]: Cordova
+            - generic [ref=e571]: Capacitor
+            - generic [ref=e572]: iOS
+            - generic [ref=e573]: Android
+            - generic [ref=e574]: Xcode
+            - generic [ref=e575]: Android Studio
+            - generic [ref=e576]: TestFlight
+        - generic [ref=e578]:
+          - heading "Security / Auth" [level=3] [ref=e579]
+          - generic [ref=e580]:
+            - generic [ref=e581]: Okta
+            - generic [ref=e582]: SSO
+            - generic [ref=e583]: Route Guards
+            - generic [ref=e584]: Role-Based Access
+        - generic [ref=e586]:
+          - heading "AI / Productivity" [level=3] [ref=e587]
+          - generic [ref=e588]:
+            - generic [ref=e589]: GitHub Copilot
+            - generic [ref=e590]: OpenAI Codex
+            - generic [ref=e591]: Cloud Code
+            - generic [ref=e592]: Gemini-based workflows
+            - generic [ref=e593]: AI-assisted engineering
+    - generic [ref=e595]:
+      - heading "Experience" [level=2] [ref=e597]
+      - generic [ref=e599]:
+        - article [ref=e600]:
+          - time [ref=e602]: Oct 2024 – Mar 2026
+          - generic [ref=e603]:
+            - heading "BNY Mellon" [level=3] [ref=e604]
+            - paragraph [ref=e605]: Senior Software Engineer | Enterprise Payments Platform
+            - paragraph [ref=e606]: Enterprise payments platform, modular frontend architecture, data-intensive workflows, and backend/API integration.
+            - paragraph [ref=e607]:
+              - img [ref=e608]
+              - text: New York, USA
+          - generic [ref=e612]: Finance / Banking
+        - article [ref=e613]:
+          - time [ref=e615]: Oct 2019 – May 2024
+          - generic [ref=e616]:
+            - heading "EPAM Systems" [level=3] [ref=e617]
+            - paragraph [ref=e618]: Senior Software Engineer
+            - paragraph [ref=e619]: Enterprise web, mobile, and full-stack delivery across multiple client domains.
+            - paragraph [ref=e620]:
+              - img [ref=e621]
+              - text: Remote → USA
+          - generic [ref=e625]: Finance, Retail, Warehouse Management, Healthcare
+        - article [ref=e626]:
+          - time [ref=e628]: Feb 2018 – Oct 2019
+          - generic [ref=e629]:
+            - heading "Luxoft / DXC Technology" [level=3] [ref=e630]
+            - paragraph [ref=e631]: JavaScript Developer
+            - paragraph [ref=e632]: Frontend engineering for a high-traffic visual content platform.
+            - paragraph [ref=e633]:
+              - img [ref=e634]
+              - text: Remote → USA
+          - generic [ref=e638]: Media / Content Hosting & Sales
+        - article [ref=e639]:
+          - time [ref=e641]: Jul 2016 – Jan 2018
+          - generic [ref=e642]:
+            - heading "TicketHunt.net" [level=3] [ref=e643]
+            - paragraph [ref=e644]: Front-End Developer
+            - paragraph [ref=e645]: Event ticketing platform with responsive UI, maps, payments-related workflows, auctions, and API-connected features.
+            - paragraph [ref=e646]:
+              - img [ref=e647]
+              - text: Ukraine
+          - generic [ref=e651]: E-commerce / Events
+        - article [ref=e652]:
+          - time [ref=e654]: Feb 2016 – Jun 2016
+          - generic [ref=e655]:
+            - heading "GoIT" [level=3] [ref=e656]
+            - paragraph [ref=e657]: Front-End Developer
+            - paragraph [ref=e658]: Responsive websites using progressive enhancement and cross-browser frontend practices.
+            - paragraph [ref=e659]:
+              - img [ref=e660]
+              - text: Ukraine
+          - generic [ref=e664]: Web Development
+    - generic [ref=e666]:
+      - heading "Featured Projects" [level=2] [ref=e668]
+      - generic [ref=e669]:
+        - article [ref=e671]:
+          - generic [ref=e672]:
+            - img [ref=e674]
+            - generic [ref=e676]:
+              - heading "Enterprise Payments Platform" [level=3] [ref=e677]
+              - paragraph [ref=e678]: BNY Mellon
+              - paragraph [ref=e679]: Large-scale internal payments platform with modular frontend architecture, configurable business behavior, backend/API integration, and data-intensive operational workflows.
+            - generic [ref=e680]:
+              - generic [ref=e681]: Angular
+              - generic [ref=e682]: Micro-frontends
+              - generic [ref=e683]: Native Federation
+              - generic [ref=e684]: Ag-Grid
+              - generic [ref=e685]: Highcharts
+              - generic [ref=e686]: OpenAPI
+            - button "View details" [ref=e687] [cursor=pointer]:
+              - text: View details
+              - img [ref=e688]
+        - article [ref=e691]:
+          - generic [ref=e692]:
+            - img [ref=e694]
+            - generic [ref=e697]:
+              - heading "IPO Analysis Platform" [level=3] [ref=e698]
+              - paragraph [ref=e699]: S&P Global
+              - paragraph [ref=e700]: Data-intensive IPO analysis system supporting complex financial workflows, backend API integration, modernization, and analytical user experiences.
+            - generic [ref=e701]:
+              - generic [ref=e702]: Angular
+              - generic [ref=e703]: .NET
+              - generic [ref=e704]: Highcharts
+              - generic [ref=e705]: REST APIs
+              - generic [ref=e706]: SQL
+            - button "View details" [ref=e707] [cursor=pointer]:
+              - text: View details
+              - img [ref=e708]
+        - article [ref=e711]:
+          - generic [ref=e712]:
+            - img [ref=e714]
+            - generic [ref=e718]:
+              - heading "Credit Card Servicing" [level=3] [ref=e719]
+              - paragraph [ref=e720]: OneMain Financial
+              - paragraph [ref=e721]: Cross-platform web, Android, and iOS servicing functionality for balances, payments, account details, and customer workflows.
+            - generic [ref=e722]:
+              - generic [ref=e723]: Angular
+              - generic [ref=e724]: Ionic
+              - generic [ref=e725]: Node.js
+              - generic [ref=e726]: Mobile
+              - generic [ref=e727]: API Integration
+            - button "View details" [ref=e728] [cursor=pointer]:
+              - text: View details
+              - img [ref=e729]
+        - article [ref=e732]:
+          - generic [ref=e733]:
+            - img [ref=e735]
+            - generic [ref=e738]:
+              - heading "Health Tracking App" [level=3] [ref=e739]
+              - paragraph [ref=e740]: Takeda
+              - paragraph [ref=e741]: iOS healthcare application supporting patient observation, injection-related workflows, and mobile delivery through TestFlight/App Store processes.
+            - generic [ref=e742]:
+              - generic [ref=e743]: iOS
+              - generic [ref=e744]: Mobile
+              - generic [ref=e745]: TestFlight
+              - generic [ref=e746]: Healthcare
+            - button "View details" [ref=e747] [cursor=pointer]:
+              - text: View details
+              - img [ref=e748]
+        - article [ref=e751]:
+          - generic [ref=e752]:
+            - img [ref=e754]
+            - generic [ref=e765]:
+              - heading "Warehouse Application" [level=3] [ref=e766]
+              - paragraph [ref=e767]: Party City
+              - paragraph [ref=e768]: Android warehouse application integrating barcode scanning, receipt printer workflows, backend API interactions, and a Node.js proxy service deployed with Docker.
+            - generic [ref=e769]:
+              - generic [ref=e770]: Android
+              - generic [ref=e771]: Node.js
+              - generic [ref=e772]: Docker
+              - generic [ref=e773]: Barcode Scanning
+            - button "View details" [ref=e774] [cursor=pointer]:
+              - text: View details
+              - img [ref=e775]
+        - article [ref=e778]:
+          - generic [ref=e779]:
+            - img [ref=e781]
+            - generic [ref=e782]:
+              - heading "Product Lookup Kiosk" [level=3] [ref=e783]
+              - paragraph [ref=e784]: Canadian Tire
+              - paragraph [ref=e785]: Android kiosk-style product lookup application with barcode scanning, backend-connected product search, and in-store operational workflows.
+            - generic [ref=e786]:
+              - generic [ref=e787]: Android
+              - generic [ref=e788]: REST APIs
+              - generic [ref=e789]: Barcode Scanning
+              - generic [ref=e790]: Retail
+            - button "View details" [ref=e791] [cursor=pointer]:
+              - text: View details
+              - img [ref=e792]
+    - generic [ref=e795]:
+      - heading "Contact" [level=2] [ref=e797]
+      - generic [ref=e799]:
+        - generic [ref=e800]:
+          - generic [ref=e801]: New York, USA
+          - heading "Let’s connect" [level=2] [ref=e802]
+          - paragraph [ref=e803]: I’m open to senior frontend, full-stack, enterprise UI architecture, and AI-assisted engineering opportunities.
+          - paragraph [ref=e804]: Volodymyr Dahl East Ukrainian National University · Master’s Degree, Engineering / Finance
+        - generic [ref=e805]:
+          - link "Connect with Yurii Ochkalov on LinkedIn" [ref=e806] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/ochkalov
+            - generic [ref=e807]: Connect on LinkedIn
+            - img [ref=e809]
+          - link "View Yurii Ochkalov GitHub profile placeholder" [ref=e813] [cursor=pointer]:
+            - /url: https://github.com/YOUR_GITHUB_USERNAME
+            - generic [ref=e814]: View GitHub
+            - img [ref=e816]
+  - contentinfo [ref=e820]: © 2026 Yurii Ochkalov. Built with React, TypeScript, Vite, and AI-assisted engineering workflows.
