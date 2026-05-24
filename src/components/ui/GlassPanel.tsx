@@ -33,10 +33,17 @@ export function GlassPanel({ accent = 'neutral', className, children, ...props }
   const bgClasses = classes.filter((c) => c.startsWith('bg-') || c.includes(':bg-'))
   const borderClasses = classes.filter((c) => c.startsWith('border') || c.includes(':border'))
   const layoutClasses = classes.filter((c) => c.startsWith('flex') || c.startsWith('grid') || c.startsWith('col-') || c.startsWith('row-'))
+  const heightClasses = classes.filter(
+    (c) =>
+      c.startsWith('min-h-') ||
+      c.startsWith('h-') ||
+      c.includes(':min-h-') ||
+      c.includes(':h-')
+  )
   
-  const innerClasses = [...paddingClasses, ...bgClasses, ...layoutClasses]
+  const innerClasses = [...paddingClasses, ...bgClasses, ...layoutClasses, ...heightClasses]
   const outerClasses = classes.filter(
-    (c) => !innerClasses.includes(c) && !borderClasses.includes(c)
+    (c) => !paddingClasses.includes(c) && !bgClasses.includes(c) && !borderClasses.includes(c) && !layoutClasses.includes(c)
   )
 
   return (
