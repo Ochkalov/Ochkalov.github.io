@@ -17,6 +17,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      VITE_BASE_PATH: /portfolio/
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -35,6 +37,9 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
