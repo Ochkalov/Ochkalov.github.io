@@ -12,10 +12,12 @@ const labels = [
 ]
 
 const cubeLayers = [
-  'translate-y-[-76px] scale-[0.48] opacity-80',
-  'translate-y-[-42px] scale-[0.68] opacity-90',
-  'translate-y-[-6px] scale-[0.9] opacity-100',
-  'translate-y-[34px] scale-[1.08] opacity-90',
+  'translate-y-[-94px] scale-[0.42] opacity-70',
+  'translate-y-[-66px] scale-[0.56] opacity-82',
+  'translate-y-[-36px] scale-[0.72] opacity-92',
+  'translate-y-[-6px] scale-[0.92] opacity-100',
+  'translate-y-[34px] scale-[1.1] opacity-88',
+  'translate-y-[70px] scale-[1.22] opacity-58',
 ]
 
 export function AnimatedEngineeringCore() {
@@ -27,24 +29,32 @@ export function AnimatedEngineeringCore() {
       className="relative min-h-[390px] border-emerald/15 bg-charcoal/60 p-5 sm:min-h-[460px]"
     >
       <div className="absolute inset-0 technical-grid opacity-35" aria-hidden="true" />
-      <div className="absolute inset-x-10 bottom-8 h-24 bg-[radial-gradient(ellipse_at_center,rgba(20,241,149,0.18),transparent_68%)] blur-xl" />
+      <div className="hero-core-scan absolute inset-0 opacity-45" aria-hidden="true" />
+      <div className="hero-terrain absolute inset-x-0 bottom-0 h-28" aria-hidden="true" />
+      <div className="absolute inset-x-10 bottom-8 h-28 bg-[radial-gradient(ellipse_at_center,rgba(20,241,149,0.22),transparent_68%)] blur-xl" />
 
       <motion.div
         aria-hidden="true"
-        className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full border border-amber/26"
+        className="orbital-line absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full border border-amber/24"
         animate={reducedMotion ? undefined : { rotate: 360 }}
         transition={{ duration: 32, repeat: Infinity, ease: 'linear' }}
       />
       <motion.div
         aria-hidden="true"
-        className="absolute left-1/2 top-1/2 h-52 w-52 -translate-x-1/2 -translate-y-1/2 rounded-full border border-emerald/25"
+        className="orbital-line absolute left-1/2 top-1/2 h-52 w-52 -translate-x-1/2 -translate-y-1/2 rounded-full border border-emerald/22"
         animate={reducedMotion ? undefined : { rotate: -360 }}
         transition={{ duration: 24, repeat: Infinity, ease: 'linear' }}
+      />
+      <motion.div
+        aria-hidden="true"
+        className="absolute left-1/2 top-1/2 h-40 w-80 -translate-x-1/2 -translate-y-1/2 rounded-[50%] border border-cyan/14"
+        animate={reducedMotion ? undefined : { rotate: [8, 368] }}
+        transition={{ duration: 38, repeat: Infinity, ease: 'linear' }}
       />
 
       <div className="absolute inset-0 flex items-center justify-center">
         <motion.div
-          className="relative h-60 w-60"
+          className="relative h-72 w-72"
           animate={
             reducedMotion
               ? undefined
@@ -66,8 +76,10 @@ export function AnimatedEngineeringCore() {
               style={{ '--cube-index': index } as CSSProperties}
             />
           ))}
-          <div className="absolute left-1/2 top-1/2 size-16 -translate-x-1/2 -translate-y-1/2 rounded-md bg-amber/80 blur-lg" />
-          <div className="absolute left-1/2 top-1/2 size-7 -translate-x-1/2 -translate-y-1/2 rounded-md bg-amber" />
+          <div className="absolute left-1/2 top-1/2 size-20 -translate-x-1/2 -translate-y-1/2 rounded-md bg-amber/75 blur-xl" />
+          <div className="absolute left-1/2 top-1/2 size-8 -translate-x-1/2 -translate-y-1/2 rounded-md bg-amber shadow-amber" />
+          <div className="absolute left-[43%] top-[26%] size-4 rounded bg-emerald shadow-glow" />
+          <div className="absolute right-[34%] top-[39%] size-3 rounded bg-cyan/80 shadow-glow" />
         </motion.div>
       </div>
 

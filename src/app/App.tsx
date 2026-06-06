@@ -1,5 +1,6 @@
 import { AIFluency } from '../components/ai/AIFluency'
 import { ContactPanel } from '../components/contact/ContactPanel'
+import { EducationCard } from '../components/education/EducationCard'
 import { ExperienceTimeline } from '../components/experience/ExperienceTimeline'
 import { Hero } from '../components/hero/Hero'
 import { ImpactGrid } from '../components/impact/ImpactGrid'
@@ -40,6 +41,9 @@ export default function App() {
       </Section>
       <Section id="projects" title="Featured Projects">
         <FeaturedProjects />
+      </Section>
+      <Section id="education" title="Education">
+        <EducationCard />
       </Section>
       <Section id="contact" title="Contact">
         <ContactPanel />

@@ -21,6 +21,22 @@ function renderHeadline() {
   )
 }
 
+function renderSubheadline() {
+  const [prefix, rest] = profile.hero.subheadline.split('10 years')
+
+  if (!rest) {
+    return profile.hero.subheadline
+  }
+
+  return (
+    <>
+      {prefix}
+      <span className="font-bold text-amber">10 years</span>
+      {rest}
+    </>
+  )
+}
+
 export function Hero() {
   return (
     <section id="home" className="relative scroll-mt-24 py-8 sm:py-10 lg:py-8">
@@ -39,7 +55,7 @@ export function Hero() {
             <h1 className="max-w-3xl text-4xl font-black leading-[1.05] text-ink sm:text-5xl xl:text-[3.65rem]">
               {renderHeadline()}
             </h1>
-            <p className="mt-6 max-w-2xl text-base leading-7 text-muted sm:text-lg">{profile.hero.subheadline}</p>
+            <p className="mt-6 max-w-2xl text-base leading-7 text-muted sm:text-lg">{renderSubheadline()}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Button href="#projects" variant="primary" icon={<ArrowDown size={16} aria-hidden="true" />}>
                 View My Work

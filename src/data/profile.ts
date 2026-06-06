@@ -22,8 +22,9 @@ export interface Profile {
     copy: string
   }
   education: {
-    school: string
-    degree: string
+    institutionLabel: string
+    credential: string
+    focus: string
     dates: string
   }
 }
@@ -62,8 +63,9 @@ export const profile: Profile = {
     copy: 'I’m open to senior frontend, full-stack, enterprise UI architecture, and AI-assisted engineering opportunities.',
   },
   education: {
-    school: 'Volodymyr Dahl East Ukrainian National University',
-    degree: 'Master’s Degree, Engineering / Finance',
+    institutionLabel: 'University',
+    credential: 'Master’s Degree',
+    focus: 'Engineering / Finance',
     dates: 'Sep 2002 – Jan 2010',
   },
 }

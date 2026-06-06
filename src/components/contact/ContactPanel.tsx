@@ -29,9 +29,6 @@ export function ContactPanel() {
           <Badge tone="emerald">{profile.location}</Badge>
           <h2 className="mt-5 text-3xl font-black text-ink sm:text-4xl">{profile.contact.title}</h2>
           <p className="mt-4 max-w-2xl text-base leading-7 text-muted">{profile.contact.copy}</p>
-          <p className="mt-5 text-sm leading-6 text-muted">
-            {profile.education.school} · {profile.education.degree}
-          </p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
           <Button

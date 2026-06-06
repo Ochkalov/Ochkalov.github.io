@@ -11,7 +11,7 @@ export function HeroMetrics() {
         {heroMetrics.map((metric, index) => (
           <motion.div
             key={metric.label}
-            className="flex min-h-[86px] items-center gap-3 rounded-md border border-white/[0.07] bg-white/[0.025] px-3 py-3"
+            className="flex min-h-[104px] items-start gap-3 rounded-md border border-white/[0.055] bg-white/[0.022] px-3 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.018)] transition hover:border-emerald/18 hover:bg-emerald/[0.025]"
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -25,9 +25,11 @@ export function HeroMetrics() {
                   prefix={metric.prefix}
                   suffix={metric.suffix}
                   staticValue={metric.staticValue}
+                  animate={false}
                 />
               </p>
               <p className="mt-1 text-xs leading-4 text-muted">{metric.label}</p>
+              {metric.description ? <p className="mt-2 text-[11px] leading-4 text-muted/75">{metric.description}</p> : null}
             </div>
           </motion.div>
         ))}

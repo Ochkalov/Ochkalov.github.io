@@ -1,7 +1,10 @@
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import { motion } from 'motion/react'
-import { aiTools } from '../../data/aiTools'
+import { aiOutcomes, aiTools } from '../../data/aiTools'
+import { usePrefersReducedMotion } from '../../hooks/usePrefersReducedMotion'
+import { Badge } from '../ui/Badge'
 import { GlassPanel } from '../ui/GlassPanel'
+import { IconBadge } from '../ui/IconBadge'
 import { AIToolCard } from './AIToolCard'
 
 const flowSteps = [
@@ -13,14 +16,42 @@ const flowSteps = [
 ]
 
 export function AIFluency() {
+  const prefersReducedMotion = usePrefersReducedMotion()
+
   return (
     <div className="grid gap-5 xl:grid-cols-[0.9fr_1.1fr]">
       <GlassPanel accent="cyan" className="p-5 sm:p-6">
         <p className="text-base leading-7 text-muted">
           I use AI-assisted engineering workflows to accelerate discovery, implementation, debugging, refactoring,
-          testing, documentation, and architectural exploration while keeping human review, code quality, and
-          production safety at the center.
+          testing, documentation, code review preparation, and architectural exploration while keeping human review,
+          code quality, production safety, and ownership at the center.
         </p>
+
+        <div className="mt-6 grid gap-3 sm:grid-cols-2">
+          {aiOutcomes.map((outcome, index) => (
+            <motion.article
+              key={outcome.title}
+              className="ai-outcome-card group relative overflow-hidden rounded-md border border-white/[0.06] bg-white/[0.025] p-3 transition hover:border-cyan/20"
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={prefersReducedMotion ? undefined : { scale: 1.012 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.05, duration: 0.36 }}
+            >
+              <span className="ai-outcome-trace" aria-hidden="true" />
+              <div className="relative z-10 flex items-start gap-3">
+                <IconBadge icon={outcome.icon} tone={index % 2 === 0 ? 'emerald' : 'amber'} className="size-8" />
+                <div>
+                  <h3 className="text-sm font-bold text-ink">{outcome.title}</h3>
+                  <Badge tone={index % 2 === 0 ? 'emerald' : 'amber'} className="mt-2">
+                    {outcome.signal}
+                  </Badge>
+                </div>
+              </div>
+              <p className="relative z-10 mt-3 text-xs leading-5 text-muted">{outcome.description}</p>
+            </motion.article>
+          ))}
+        </div>
 
         <div className="mt-8 space-y-4">
           {flowSteps.map((step, index) => (

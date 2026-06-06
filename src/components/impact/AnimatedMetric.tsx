@@ -7,16 +7,17 @@ interface AnimatedMetricProps {
   prefix?: string
   suffix?: string
   staticValue?: string
+  animate?: boolean
 }
 
-export function AnimatedMetric({ value, prefix = '', suffix = '', staticValue }: AnimatedMetricProps) {
+export function AnimatedMetric({ value, prefix = '', suffix = '', staticValue, animate = true }: AnimatedMetricProps) {
   const ref = useRef<HTMLSpanElement>(null)
   const isInView = useInView(ref, { once: true, margin: '-12% 0px' })
   const reducedMotion = usePrefersReducedMotion()
   const [displayValue, setDisplayValue] = useState(0)
 
   useEffect(() => {
-    if (typeof value !== 'number') {
+    if (typeof value !== 'number' || !animate) {
       return undefined
     }
 
@@ -41,16 +42,18 @@ export function AnimatedMetric({ value, prefix = '', suffix = '', staticValue }:
     }
 
     return undefined
-  }, [isInView, reducedMotion, value])
+  }, [animate, isInView, reducedMotion, value])
 
   if (staticValue) {
     return <span ref={ref}>{staticValue}</span>
   }
 
+  const visibleValue = !animate || reducedMotion ? value : displayValue
+
   return (
     <span ref={ref}>
       {prefix}
-      {(reducedMotion && typeof value === 'number' ? value : displayValue).toLocaleString()}
+      {(visibleValue ?? 0).toLocaleString()}
       {suffix}
     </span>
   )

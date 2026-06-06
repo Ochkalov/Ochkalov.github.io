@@ -27,6 +27,15 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           <p className="mt-1 text-sm font-medium text-amber">{project.client}</p>
           <p className="mt-4 text-sm leading-6 text-muted">{project.description}</p>
           {isExpanded ? <p className="mt-3 text-sm leading-6 text-muted">{project.detail}</p> : null}
+          {project.outcomes?.length ? (
+            <div className="mt-4 flex flex-wrap gap-2">
+              {project.outcomes.map((outcome, outcomeIndex) => (
+                <Badge key={outcome} tone={outcomeIndex % 2 === 0 ? 'emerald' : 'cyan'}>
+                  {outcome}
+                </Badge>
+              ))}
+            </div>
+          ) : null}
         </div>
         <div className="mt-5 flex flex-wrap gap-2">
           {project.tags.map((tag, tagIndex) => (

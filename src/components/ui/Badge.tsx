@@ -6,10 +6,10 @@ interface BadgeProps extends ComponentPropsWithoutRef<'span'> {
 }
 
 const toneStyles = {
-  emerald: 'border-emerald/30 bg-emerald/10 text-emerald',
-  amber: 'border-amber/30 bg-amber/10 text-amber',
-  cyan: 'border-cyan/30 bg-cyan/10 text-cyan',
-  neutral: 'border-white/12 bg-white/[0.045] text-muted',
+  emerald: 'border-emerald/22 bg-emerald/[0.055] text-emerald shadow-[inset_0_1px_0_rgba(255,255,255,0.035)]',
+  amber: 'border-amber/22 bg-amber/[0.055] text-amber shadow-[inset_0_1px_0_rgba(255,255,255,0.035)]',
+  cyan: 'border-cyan/22 bg-cyan/[0.055] text-cyan shadow-[inset_0_1px_0_rgba(255,255,255,0.035)]',
+  neutral: 'border-white/8 bg-white/[0.025] text-muted shadow-[inset_0_1px_0_rgba(255,255,255,0.02)]',
 }
 
 export function Badge({ tone = 'neutral', className, children, ...props }: BadgeProps) {
