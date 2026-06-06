@@ -1,13 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { usePrefersReducedMotion } from '../../hooks/usePrefersReducedMotion'
 
-const EMERALD = [20, 241, 149]
-const CYAN = [6, 182, 212]
-const AMBER = [245, 158, 11]
-
-function rgba([r, g, b]: number[], a: number) {
-  return `rgba(${r},${g},${b},${a})`
-}
+import { EMERALD, CYAN, AMBER, rgba } from '../../utils/colors'
 
 export function FloatingParticles() {
   const reducedMotion = usePrefersReducedMotion()

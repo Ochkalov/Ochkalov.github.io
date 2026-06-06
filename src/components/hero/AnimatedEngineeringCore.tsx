@@ -14,16 +14,7 @@ import {
 import { usePrefersReducedMotion } from '../../hooks/usePrefersReducedMotion'
 import { GlassPanel } from '../ui/GlassPanel'
 
-/* ── palette ── */
-const EMERALD = { r: 20, g: 241, b: 149 }
-const AMBER = { r: 246, g: 195, b: 67 }
-const CYAN = { r: 94, g: 234, b: 212 }
-
-type Color = typeof EMERALD
-
-function rgba(c: Color, a: number) {
-  return `rgba(${c.r},${c.g},${c.b},${a})`
-}
+import { EMERALD, AMBER, CYAN, rgba, type RGBColor as Color } from '../../utils/colors'
 
 /* ── constellation nodes ── */
 interface SkillNode {
