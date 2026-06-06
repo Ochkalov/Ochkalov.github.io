@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import { Code2, Download, ExternalLink } from 'lucide-react'
 import { profile } from '../../data/profile'
 import { Badge } from '../ui/Badge'
@@ -6,21 +5,8 @@ import { Button } from '../ui/Button'
 import { GlassPanel } from '../ui/GlassPanel'
 
 export function ContactPanel() {
-  const [hasResume, setHasResume] = useState(false)
-
-  useEffect(() => {
-    const controller = new AbortController()
-    const resumeUrl = `${import.meta.env.BASE_URL}resume.pdf`
-
-    fetch(resumeUrl, { method: 'HEAD', signal: controller.signal })
-      .then((response) => {
-        const contentType = response.headers.get('content-type') ?? ''
-        setHasResume(response.ok && contentType.includes('application/pdf'))
-      })
-      .catch(() => setHasResume(false))
-
-    return () => controller.abort()
-  }, [])
+  const resumeUrl = import.meta.env.VITE_RESUME_URL?.trim()
+  const isExternalResumeUrl = resumeUrl ? /^https?:\/\//.test(resumeUrl) : false
 
   return (
     <GlassPanel accent="emerald" className="p-6 sm:p-8">
@@ -49,9 +35,10 @@ export function ContactPanel() {
           >
             View GitHub
           </Button>
-          {hasResume ? (
+          {resumeUrl ? (
             <Button
-              href={`${import.meta.env.BASE_URL}resume.pdf`}
+              href={resumeUrl}
+              external={isExternalResumeUrl}
               variant="ghost"
               icon={<Download size={16} aria-hidden="true" />}
               ariaLabel="Download resume"
