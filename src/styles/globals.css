@@ -23,7 +23,7 @@ body {
   min-height: 100vh;
   margin: 0;
   overflow-x: hidden;
-  background: var(--background);
+  background: transparent;
   color: var(--foreground);
   font-family:
     InterVariable,

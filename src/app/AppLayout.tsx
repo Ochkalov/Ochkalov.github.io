@@ -18,7 +18,7 @@ export function AppLayout({ children }: AppLayoutProps) {
   const activeSection = useActiveSection(sectionIds)
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-obsidian text-ink">
+    <div className="min-h-screen overflow-x-hidden text-ink">
       <BackgroundGrid />
       <FloatingParticles />
       <ScrollProgress />
