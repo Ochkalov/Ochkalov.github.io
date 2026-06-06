@@ -14,9 +14,8 @@ import {
 import { usePrefersReducedMotion } from '../../hooks/usePrefersReducedMotion'
 import { GlassPanel } from '../ui/GlassPanel'
 
-import { EMERALD, AMBER, CYAN, rgba, type RGBColor as Color } from '../../utils/colors'
+import { EMERALD, AMBER, CYAN, WHITE, rgba, type RGBColor as Color } from '../../utils/colors'
 
-/* ── constellation nodes ── */
 interface SkillNode {
   title: string
   desc: string
@@ -26,20 +25,71 @@ interface SkillNode {
   ring: number // 0, 1, 2
 }
 
+const orbitColors = [EMERALD, CYAN, AMBER] as const satisfies readonly Color[]
+const particleColors = [EMERALD, CYAN, AMBER, WHITE] as const satisfies readonly Color[]
+
 const nodes: SkillNode[] = [
-  { title: 'AI-Assisted Engineering', desc: 'AI tools & productivity', icon: Sparkles, tone: EMERALD, angle: -100, ring: 1 },
+  {
+    title: 'AI-Assisted Engineering',
+    desc: 'AI tools & productivity',
+    icon: Sparkles,
+    tone: EMERALD,
+    angle: -100,
+    ring: 1,
+  },
   { title: 'React', desc: 'Modern UI interfaces', icon: Code2, tone: CYAN, angle: -45, ring: 2 },
-  { title: 'API Integration', desc: 'Systems & data', icon: Globe, tone: AMBER, angle: -5, ring: 1 },
-  { title: 'Full-Stack Delivery', desc: 'Idea to production', icon: Rocket, tone: AMBER, angle: 45, ring: 2 },
-  { title: 'Enterprise Architecture', desc: 'Scalable & secure', icon: Layers3, tone: CYAN, angle: 85, ring: 1 },
-  { title: 'Data-Driven Systems', desc: 'Dashboards & analytics', icon: Database, tone: EMERALD, angle: 135, ring: 2 },
-  { title: 'Micro-Frontends', desc: 'Modular architectures', icon: Blocks, tone: CYAN, angle: 175, ring: 1 },
-  { title: 'Angular', desc: 'Enterprise applications', icon: Cpu, tone: EMERALD, angle: -140, ring: 2 },
+  {
+    title: 'API Integration',
+    desc: 'Systems & data',
+    icon: Globe,
+    tone: AMBER,
+    angle: -5,
+    ring: 1,
+  },
+  {
+    title: 'Full-Stack Delivery',
+    desc: 'Idea to production',
+    icon: Rocket,
+    tone: AMBER,
+    angle: 45,
+    ring: 2,
+  },
+  {
+    title: 'Enterprise Architecture',
+    desc: 'Scalable & secure',
+    icon: Layers3,
+    tone: CYAN,
+    angle: 85,
+    ring: 1,
+  },
+  {
+    title: 'Data-Driven Systems',
+    desc: 'Dashboards & analytics',
+    icon: Database,
+    tone: EMERALD,
+    angle: 135,
+    ring: 2,
+  },
+  {
+    title: 'Micro-Frontends',
+    desc: 'Modular architectures',
+    icon: Blocks,
+    tone: CYAN,
+    angle: 175,
+    ring: 1,
+  },
+  {
+    title: 'Angular',
+    desc: 'Enterprise applications',
+    icon: Cpu,
+    tone: EMERALD,
+    angle: -140,
+    ring: 2,
+  },
 ]
 
 function useConstellationCanvas(
   canvasRef: React.RefObject<HTMLCanvasElement | null>,
-  containerRef: React.RefObject<HTMLDivElement | null>,
   reducedMotion: boolean,
 ) {
   const mouseRef = useRef({ x: 0.5, y: 0.5 })
@@ -74,23 +124,21 @@ function useConstellationCanvas(
     const w = () => canvas.width / Math.min(window.devicePixelRatio, 2)
     const h = () => canvas.height / Math.min(window.devicePixelRatio, 2)
 
-    /* — small orbiting particles on rings — */
     const ringParticles = Array.from({ length: 18 }, (_, i) => ({
       angle: Math.random() * 360,
       speed: 0.05 + Math.random() * 0.1,
       ring: i % 3,
       size: 1 + Math.random() * 1.5,
-      color: [EMERALD, CYAN, AMBER][i % 3],
+      color: orbitColors[i % orbitColors.length],
     }))
 
-    /* — ambient particles scattered everywhere — */
     const ambientParticles = Array.from({ length: 45 }, (_, i) => ({
-      x: Math.random(), // 0 to 1
-      y: Math.random(), // 0 to 1
+      x: Math.random(),
+      y: Math.random(),
       vx: (Math.random() - 0.5) * 0.0005,
       vy: (Math.random() - 0.5) * 0.0005,
       size: Math.random() * 2 + 0.5,
-      color: [EMERALD, CYAN, AMBER, '#ffffff'][i % 4],
+      color: particleColors[i % particleColors.length],
       alphaPhase: Math.random() * Math.PI * 2,
     }))
 
@@ -107,16 +155,17 @@ function useConstellationCanvas(
 
       ctx.clearRect(0, 0, cw, ch)
 
-      /* ambient free-floating particles */
       ambientParticles.forEach((p) => {
         p.x += p.vx
         p.y += p.vy
-        if (p.x < 0) p.x = 1; if (p.x > 1) p.x = 0;
-        if (p.y < 0) p.y = 1; if (p.y > 1) p.y = 0;
-        
+        if (p.x < 0) p.x = 1
+        if (p.x > 1) p.x = 0
+        if (p.y < 0) p.y = 1
+        if (p.y > 1) p.y = 0
+
         const px = p.x * cw + mx * 0.5
         const py = p.y * ch + my * 0.5
-        const alpha = 0.1 + 0.3 * (Math.sin(t * 3 + p.alphaPhase) + 1) / 2
+        const alpha = 0.1 + (0.3 * (Math.sin(t * 3 + p.alphaPhase) + 1)) / 2
 
         ctx.beginPath()
         ctx.arc(px, py, p.size, 0, Math.PI * 2)
@@ -124,13 +173,11 @@ function useConstellationCanvas(
         ctx.fill()
       })
 
-      /* radiating hexagonal ripples (center emission) */
       for (let i = 0; i < 3; i++) {
         const rippleT = (t * 0.6 + i / 3) % 1
-        // ease out effect for the ripple
         const easeOut = 1 - Math.pow(1 - rippleT, 3)
         const rR = dim * 0.06 + easeOut * dim * 0.25
-        
+
         ctx.beginPath()
         for (let j = 0; j < 6; j++) {
           const angle = (Math.PI / 3) * j - Math.PI / 2
@@ -145,31 +192,28 @@ function useConstellationCanvas(
         ctx.stroke()
       }
 
-      /* orbit rings (ellipses with dashed/broken look) */
-      const ringRadii = [0.18, 0.30, 0.42]
+      const ringRadii = [0.18, 0.3, 0.42]
       ringRadii.forEach((r, i) => {
         ctx.beginPath()
         ctx.ellipse(cx + mx, cy + my, cw * r, ch * r, 0, 0, Math.PI * 2)
-        ctx.strokeStyle = rgba([EMERALD, CYAN, AMBER][i], 0.12 + 0.04 * Math.sin(t * 2 + i))
+        ctx.strokeStyle = rgba(orbitColors[i], 0.12 + 0.04 * Math.sin(t * 2 + i))
         ctx.lineWidth = 1
-        
-        // Create an irregular dashed line to look "broken" and technical
+
         const circ = Math.PI * 2 * cw * r
         ctx.setLineDash([circ * 0.15, circ * 0.02, circ * 0.05, circ * 0.08])
         ctx.lineDashOffset = t * (30 + i * 15) * (i % 2 === 0 ? 1 : -1)
-        
+
         ctx.stroke()
         ctx.setLineDash([])
       })
 
-      /* connector lines from center to each node */
       nodes.forEach((node) => {
         const rad = (node.angle * Math.PI) / 180
         const r = ringRadii[node.ring]
-        
+
         const ex = cx + mx + Math.cos(rad) * (cw * r)
         const ey = cy + my + Math.sin(rad) * (ch * r)
-        
+
         ctx.beginPath()
         ctx.moveTo(cx + mx, cy + my)
         ctx.lineTo(ex, ey)
@@ -177,8 +221,7 @@ function useConstellationCanvas(
         ctx.lineWidth = 0.5
         ctx.stroke()
 
-        /* small travelling dot along connector */
-        const dotT = ((t * 0.6 + node.angle * 0.01) % 1)
+        const dotT = (t * 0.6 + node.angle * 0.01) % 1
         const dx = cx + mx + Math.cos(rad) * (cw * r) * dotT
         const dy = cy + my + Math.sin(rad) * (ch * r) * dotT
         const dotGrad = ctx.createRadialGradient(dx, dy, 0, dx, dy, 3)
@@ -190,7 +233,6 @@ function useConstellationCanvas(
         ctx.fill()
       })
 
-      /* particles on rings */
       ringParticles.forEach((p) => {
         p.angle += p.speed
         const rad = (p.angle * Math.PI) / 180
@@ -213,7 +255,6 @@ function useConstellationCanvas(
         ctx.fill()
       })
 
-      /* core pulse (hexagonal glow) */
       const pulse = (Math.sin(t * 2.5) + 1) / 2
       const coreR = dim * 0.08 + pulse * dim * 0.015
       ctx.beginPath()
@@ -246,7 +287,6 @@ function useConstellationCanvas(
   return { onPointerMove }
 }
 
-/* ── node component ── */
 function ConstellationNode({
   node,
   index,
@@ -259,8 +299,7 @@ function ConstellationNode({
   const rad = (node.angle * Math.PI) / 180
   const ringRadii = [18, 30, 42]
   const r = ringRadii[node.ring]
-  
-  /* position as percentage from center using the ellipse radii */
+
   const x = 50 + Math.cos(rad) * r
   const y = 50 + Math.sin(rad) * r
 
@@ -310,22 +349,19 @@ function ConstellationNode({
   )
 }
 
-/* ── main ── */
 export function AnimatedEngineeringCore() {
   const reducedMotion = usePrefersReducedMotion()
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
-  const { onPointerMove } = useConstellationCanvas(canvasRef, containerRef, reducedMotion)
+  const { onPointerMove } = useConstellationCanvas(canvasRef, reducedMotion)
 
   return (
     <GlassPanel
       accent="emerald"
       className="relative min-h-[440px] overflow-hidden border-emerald/15 bg-charcoal/60 p-0 sm:min-h-[500px]"
     >
-      {/* Grid bg */}
       <div className="absolute inset-0 technical-grid opacity-20" aria-hidden="true" />
 
-      {/* Ambient glows */}
       <div
         className="pointer-events-none absolute inset-0"
         aria-hidden="true"
@@ -338,7 +374,6 @@ export function AnimatedEngineeringCore() {
         }}
       />
 
-      {/* Canvas layer */}
       <div ref={containerRef} className="absolute inset-0" onPointerMove={onPointerMove}>
         <canvas
           ref={canvasRef}
@@ -348,7 +383,6 @@ export function AnimatedEngineeringCore() {
         />
       </div>
 
-      {/* Center hub */}
       <motion.div
         className="absolute left-1/2 top-1/2 z-20 flex size-28 items-center justify-center sm:size-32"
         style={{ x: '-50%', y: '-50%' }}
@@ -394,11 +428,9 @@ export function AnimatedEngineeringCore() {
         </div>
       </motion.div>
 
-      {/* Skill nodes */}
       {nodes.map((node, i) => (
         <ConstellationNode key={node.title} node={node} index={i} reducedMotion={reducedMotion} />
       ))}
     </GlassPanel>
   )
 }
-

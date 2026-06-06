@@ -48,11 +48,40 @@ export const heroMetrics: Metric[] = [
     description: 'Calculated from first frontend role',
     icon: Boxes,
   },
-  { label: 'Attribute Workflows', value: 200, suffix: '+', description: 'Large data-heavy enterprise UI workflows', icon: DatabaseZap },
-  { label: 'Engineering Teams Collaborated', value: 6, suffix: '+', description: 'Cross-team delivery and API alignment', icon: GitBranch },
-  { label: 'Greenfield Micro-frontends', value: 3, description: 'From initial implementation to production', icon: Layers3 },
-  { label: 'FCP Improvement', value: 2, prefix: '~', suffix: 's', description: 'Legacy platform modernization result', icon: ChartNoAxesCombined },
-  { label: 'AI-Assisted Engineering', staticValue: 'AI', description: 'Accelerated with human review and ownership', icon: BrainCircuit },
+  {
+    label: 'Attribute Workflows',
+    value: 200,
+    suffix: '+',
+    description: 'Large data-heavy enterprise UI workflows',
+    icon: DatabaseZap,
+  },
+  {
+    label: 'Engineering Teams Collaborated',
+    value: 6,
+    suffix: '+',
+    description: 'Cross-team delivery and API alignment',
+    icon: GitBranch,
+  },
+  {
+    label: 'Greenfield Micro-frontends',
+    value: 3,
+    description: 'From initial implementation to production',
+    icon: Layers3,
+  },
+  {
+    label: 'FCP Improvement',
+    value: 2,
+    prefix: '~',
+    suffix: 's',
+    description: 'Legacy platform modernization result',
+    icon: ChartNoAxesCombined,
+  },
+  {
+    label: 'AI-Assisted Engineering',
+    staticValue: 'AI',
+    description: 'Accelerated with human review and ownership',
+    icon: BrainCircuit,
+  },
 ]
 
 export const impactItems: ImpactItem[] = [
@@ -131,6 +160,10 @@ export const impactItems: ImpactItem[] = [
     description:
       'Built mobile and kiosk-style operational workflows involving Android devices, barcode scanning, receipt printer interactions, backend APIs, and retail or warehouse execution paths.',
     icon: Smartphone,
-    proofPoints: ['Barcode scanner workflows', 'Receipt printer interactions', 'Kiosk and warehouse operations'],
+    proofPoints: [
+      'Barcode scanner workflows',
+      'Receipt printer interactions',
+      'Kiosk and warehouse operations',
+    ],
   },
 ]

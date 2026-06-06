@@ -55,12 +55,22 @@ export function Hero() {
             <h1 className="max-w-3xl text-4xl font-black leading-[1.05] text-ink sm:text-5xl xl:text-[3.65rem]">
               {renderHeadline()}
             </h1>
-            <p className="mt-6 max-w-2xl text-base leading-7 text-muted sm:text-lg">{renderSubheadline()}</p>
+            <p className="mt-6 max-w-2xl text-base leading-7 text-muted sm:text-lg">
+              {renderSubheadline()}
+            </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <Button href="#projects" variant="primary" icon={<ArrowDown size={16} aria-hidden="true" />}>
+              <Button
+                href="#projects"
+                variant="primary"
+                icon={<ArrowDown size={16} aria-hidden="true" />}
+              >
                 View My Work
               </Button>
-              <Button href="#experience" variant="secondary" icon={<BriefcaseBusiness size={16} aria-hidden="true" />}>
+              <Button
+                href="#experience"
+                variant="secondary"
+                icon={<BriefcaseBusiness size={16} aria-hidden="true" />}
+              >
                 View Experience
               </Button>
               <Button

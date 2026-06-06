@@ -23,8 +23,7 @@ export const experience: ExperienceItem[] = [
     location: 'Remote → USA',
     dates: 'Oct 2019 – May 2024',
     domain: 'Finance, Retail, Warehouse Management, Healthcare',
-    context:
-      'Enterprise web, mobile, and full-stack delivery across multiple client domains.',
+    context: 'Enterprise web, mobile, and full-stack delivery across multiple client domains.',
   },
   {
     company: 'Luxoft / DXC Technology',

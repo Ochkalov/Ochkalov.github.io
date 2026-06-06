@@ -22,9 +22,10 @@ export function AIFluency() {
     <div className="grid gap-5 xl:grid-cols-[0.9fr_1.1fr]">
       <GlassPanel accent="cyan" className="p-5 sm:p-6">
         <p className="text-base leading-7 text-muted">
-          I use AI-assisted engineering workflows to accelerate discovery, implementation, debugging, refactoring,
-          testing, documentation, code review preparation, and architectural exploration while keeping human review,
-          code quality, production safety, and ownership at the center.
+          I use AI-assisted engineering workflows to accelerate discovery, implementation,
+          debugging, refactoring, testing, documentation, code review preparation, and architectural
+          exploration while keeping human review, code quality, production safety, and ownership at
+          the center.
         </p>
 
         <div className="mt-6 grid gap-3 sm:grid-cols-2">
@@ -40,7 +41,11 @@ export function AIFluency() {
             >
               <span className="ai-outcome-trace" aria-hidden="true" />
               <div className="relative z-10 flex items-start gap-3">
-                <IconBadge icon={outcome.icon} tone={index % 2 === 0 ? 'emerald' : 'amber'} className="size-8" />
+                <IconBadge
+                  icon={outcome.icon}
+                  tone={index % 2 === 0 ? 'emerald' : 'amber'}
+                  className="size-8"
+                />
                 <div>
                   <h3 className="text-sm font-bold text-ink">{outcome.title}</h3>
                   <Badge tone={index % 2 === 0 ? 'emerald' : 'amber'} className="mt-2">
@@ -48,7 +53,9 @@ export function AIFluency() {
                   </Badge>
                 </div>
               </div>
-              <p className="relative z-10 mt-3 text-xs leading-5 text-muted">{outcome.description}</p>
+              <p className="relative z-10 mt-3 text-xs leading-5 text-muted">
+                {outcome.description}
+              </p>
             </motion.article>
           ))}
         </div>
@@ -69,14 +76,17 @@ export function AIFluency() {
               <span className="min-w-0 flex-1 rounded-md border border-line bg-white/[0.035] px-3 py-2 text-sm font-semibold text-ink">
                 {step}
               </span>
-              {index < flowSteps.length - 1 ? <ArrowRight className="hidden text-amber sm:block" size={18} /> : null}
+              {index < flowSteps.length - 1 ? (
+                <ArrowRight className="hidden text-amber sm:block" size={18} />
+              ) : null}
             </motion.div>
           ))}
         </div>
 
         <p className="mt-7 flex items-start gap-3 rounded-md border border-amber/26 bg-amber/8 p-4 text-sm leading-6 text-amber">
           <CheckCircle2 className="mt-0.5 shrink-0" size={18} aria-hidden="true" />
-          AI is used as an engineering accelerator, not a replacement for architecture, ownership, or review.
+          AI is used as an engineering accelerator, not a replacement for architecture, ownership,
+          or review.
         </p>
       </GlassPanel>
 

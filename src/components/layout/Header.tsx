@@ -18,7 +18,10 @@ export function Header({ activeSection }: HeaderProps) {
         >
           {profile.initials}
         </a>
-        <nav aria-label="Primary navigation" className="flex min-w-0 flex-1 items-center gap-1 overflow-x-auto py-3">
+        <nav
+          aria-label="Primary navigation"
+          className="flex min-w-0 flex-1 items-center gap-1 overflow-x-auto py-3"
+        >
           {navItems.map(({ id, label }) => (
             <a
               key={id}

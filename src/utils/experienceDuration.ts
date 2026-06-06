@@ -10,7 +10,9 @@ export interface ExperienceDuration {
 export function getExperienceDuration(currentDate = new Date()): ExperienceDuration {
   const totalMonths = Math.max(
     0,
-    (currentDate.getFullYear() - CAREER_START_YEAR) * 12 + currentDate.getMonth() - CAREER_START_MONTH_INDEX,
+    (currentDate.getFullYear() - CAREER_START_YEAR) * 12 +
+      currentDate.getMonth() -
+      CAREER_START_MONTH_INDEX,
   )
 
   return {

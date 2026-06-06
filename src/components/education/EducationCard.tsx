@@ -21,7 +21,6 @@ export function EducationCard() {
             {education.institutionLabel}
           </p>
         </div>
-
       </div>
     </GlassPanel>
   )

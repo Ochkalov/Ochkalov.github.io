@@ -10,7 +10,13 @@ interface AnimatedMetricProps {
   animate?: boolean
 }
 
-export function AnimatedMetric({ value, prefix = '', suffix = '', staticValue, animate = true }: AnimatedMetricProps) {
+export function AnimatedMetric({
+  value,
+  prefix = '',
+  suffix = '',
+  staticValue,
+  animate = true,
+}: AnimatedMetricProps) {
   const ref = useRef<HTMLSpanElement>(null)
   const isInView = useInView(ref, { once: true, margin: '-12% 0px' })
   const reducedMotion = usePrefersReducedMotion()

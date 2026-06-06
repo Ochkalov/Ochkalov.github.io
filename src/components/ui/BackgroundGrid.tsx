@@ -1,6 +1,9 @@
 export function BackgroundGrid() {
   return (
-    <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-obsidian">
+    <div
+      aria-hidden="true"
+      className="pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-obsidian"
+    >
       <div className="absolute inset-0 bg-radial-emerald" />
       <div className="absolute inset-0 bg-radial-amber" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_58%_16%,rgba(94,234,212,0.075),transparent_32rem)]" />

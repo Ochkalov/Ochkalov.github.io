@@ -23,7 +23,9 @@ export function Section({ id, title, intro, children, className }: SectionProps)
           className="mb-6 max-w-3xl"
         >
           <h2 className="text-2xl font-semibold text-ink sm:text-3xl">{title}</h2>
-          {intro ? <p className="mt-3 max-w-2xl text-sm leading-6 text-muted sm:text-base">{intro}</p> : null}
+          {intro ? (
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-muted sm:text-base">{intro}</p>
+          ) : null}
         </motion.div>
         {children}
       </Container>

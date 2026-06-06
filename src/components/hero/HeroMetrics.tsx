@@ -17,7 +17,10 @@ export function HeroMetrics() {
             viewport={{ once: true }}
             transition={{ delay: index * 0.05, duration: 0.42 }}
           >
-            <IconBadge icon={metric.icon} tone={index % 3 === 1 ? 'amber' : index % 3 === 2 ? 'cyan' : 'emerald'} />
+            <IconBadge
+              icon={metric.icon}
+              tone={index % 3 === 1 ? 'amber' : index % 3 === 2 ? 'cyan' : 'emerald'}
+            />
             <div>
               <p className="text-2xl font-black text-ink">
                 <AnimatedMetric
@@ -29,7 +32,9 @@ export function HeroMetrics() {
                 />
               </p>
               <p className="mt-1 text-xs leading-4 text-muted">{metric.label}</p>
-              {metric.description ? <p className="mt-2 text-[11px] leading-4 text-muted/75">{metric.description}</p> : null}
+              {metric.description ? (
+                <p className="mt-2 text-[11px] leading-4 text-muted/75">{metric.description}</p>
+              ) : null}
             </div>
           </motion.div>
         ))}

@@ -29,9 +29,21 @@ export const projects: Project[] = [
       'Large-scale internal payments platform with modular frontend architecture, configurable business behavior, data-intensive operational workflows, Java/Spring Boot service integration, and OpenAPI-driven API contracts.',
     detail:
       'Owned enterprise payment workflows across Angular UI modules, Native Federation-based micro-frontends, reusable patterns, Ag-Grid/Highcharts experiences, backend/API integration, validation, typed client workflows, and release readiness in a regulated banking environment.',
-    tags: ['Angular', 'Java/Spring Boot', 'Micro-frontends', 'Native Federation', 'Ag-Grid', 'Highcharts', 'OpenAPI'],
+    tags: [
+      'Angular',
+      'Java/Spring Boot',
+      'Micro-frontends',
+      'Native Federation',
+      'Ag-Grid',
+      'Highcharts',
+      'OpenAPI',
+    ],
     icon: Landmark,
-    outcomes: ['3 greenfield micro-frontends', 'API contract validation', 'Data-intensive payments UI'],
+    outcomes: [
+      '3 greenfield micro-frontends',
+      'API contract validation',
+      'Data-intensive payments UI',
+    ],
   },
   {
     title: 'IPO Analysis Platform',
@@ -42,7 +54,11 @@ export const projects: Project[] = [
       'Combined frontend modernization with full-stack delivery for financial users, integrating REST APIs, .NET Web APIs, C#, SQL-backed data, Highcharts visualizations, and complex analytical workflows.',
     tags: ['Angular', '.NET Web APIs', 'C#', 'Highcharts', 'REST APIs', 'SQL'],
     icon: BadgeDollarSign,
-    outcomes: ['Financial analytics workflows', 'Modernized legacy code', 'Backend API integration'],
+    outcomes: [
+      'Financial analytics workflows',
+      'Modernized legacy code',
+      'Backend API integration',
+    ],
   },
   {
     title: 'LSEG / Refinitiv Modernization',
@@ -64,7 +80,11 @@ export const projects: Project[] = [
       'Built media management features using JavaScript, TypeScript, Angular, reusable components, testing, bug fixing, refactoring, CI/CD-oriented collaboration, and maintainability improvements for a content hosting and sales platform.',
     tags: ['Angular', 'TypeScript', 'JavaScript', 'Media', 'Search', 'Content Platform'],
     icon: ImageIcon,
-    outcomes: ['Content hosting workflows', 'Search and licensing UX', 'Reusable frontend components'],
+    outcomes: [
+      'Content hosting workflows',
+      'Search and licensing UX',
+      'Reusable frontend components',
+    ],
   },
   {
     title: 'Credit Card Servicing',
@@ -86,7 +106,11 @@ export const projects: Project[] = [
       'Supported healthcare mobile delivery with iOS release workflows, patient observation UX, native tooling, production-ready mobile practices, and device-connected workflow considerations without exposing sensitive healthcare data.',
     tags: ['iOS', 'Capacitor', 'Mobile', 'TestFlight', 'Healthcare'],
     icon: HeartPulse,
-    outcomes: ['Healthcare mobile workflows', 'TestFlight/App Store delivery', 'Device-connected workflow support'],
+    outcomes: [
+      'Healthcare mobile workflows',
+      'TestFlight/App Store delivery',
+      'Device-connected workflow support',
+    ],
   },
   {
     title: 'Warehouse Application',
@@ -97,7 +121,11 @@ export const projects: Project[] = [
       'Built operational warehouse workflows across Android devices, barcode scanning, receipt printer behavior, API interactions, Dockerized Node.js service support, and production-oriented retail logistics processes.',
     tags: ['Angular', 'Ionic', 'Cordova', 'Android', 'Node.js', 'Docker', 'Barcode Scanning'],
     icon: ServerCog,
-    outcomes: ['Barcode scanner integration', 'Receipt printer workflows', 'Dockerized Node.js proxy'],
+    outcomes: [
+      'Barcode scanner integration',
+      'Receipt printer workflows',
+      'Dockerized Node.js proxy',
+    ],
   },
   {
     title: 'Product Lookup Kiosk',

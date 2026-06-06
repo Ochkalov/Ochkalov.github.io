@@ -1,7 +1,9 @@
 import { useEffect, useRef } from 'react'
 import { usePrefersReducedMotion } from '../../hooks/usePrefersReducedMotion'
 
-import { EMERALD, CYAN, AMBER, rgba } from '../../utils/colors'
+import { EMERALD, CYAN, AMBER, WHITE, rgba, type RGBColor } from '../../utils/colors'
+
+const particleColors = [EMERALD, CYAN, AMBER, WHITE] as const satisfies readonly RGBColor[]
 
 export function FloatingParticles() {
   const reducedMotion = usePrefersReducedMotion()
@@ -35,12 +37,12 @@ export function FloatingParticles() {
     const particles = Array.from({ length: particleCount }, (_, i) => {
       const yFraction = Math.random()
       return {
-        x: Math.random(), // 0 to 1 (horizontal fraction)
-        yPage: yFraction * docHeight, // Absolute page Y coordinate
-        vx: (Math.random() - 0.5) * 0.15, // horizontal drift pixels per frame
-        vy: (Math.random() - 0.5) * 0.15, // vertical drift pixels per frame
-        size: Math.random() * 2.2 + 1.8, // diameter 3.6 to 8px
-        color: [EMERALD, CYAN, AMBER, '#ffffff'][i % 4],
+        x: Math.random(),
+        yPage: yFraction * docHeight,
+        vx: (Math.random() - 0.5) * 0.15,
+        vy: (Math.random() - 0.5) * 0.15,
+        size: Math.random() * 2.2 + 1.8,
+        color: particleColors[i % particleColors.length],
         alphaPhase: Math.random() * Math.PI * 2,
       }
     })
@@ -66,7 +68,7 @@ export function FloatingParticles() {
         { xPercent: 0.85, yPage: 4800, speed: 0.04, color: CYAN },
         { xPercent: 0.12, yPage: 6300, speed: -0.06, color: AMBER },
         { xPercent: 0.75, yPage: 7800, speed: 0.05, color: EMERALD },
-        { xPercent: 0.50, yPage: 9100, speed: -0.04, color: CYAN },
+        { xPercent: 0.5, yPage: 9100, speed: -0.04, color: CYAN },
       ]
 
       // Update particles positions & wrap around
@@ -152,8 +154,7 @@ export function FloatingParticles() {
 
           if (dist < 110) {
             const alpha = (1 - dist / 110) * 0.15
-            const color = typeof p1.p.color === 'string' ? EMERALD : p1.p.color
-            ctx.strokeStyle = rgba(color, alpha)
+            ctx.strokeStyle = rgba(p1.p.color, alpha)
             ctx.lineWidth = 0.7
             ctx.beginPath()
             ctx.moveTo(p1.x, p1.y)
@@ -167,24 +168,20 @@ export function FloatingParticles() {
       onScreen.forEach(({ p, x, y }) => {
         const baseAlpha = 0.25
         const maxAlpha = 0.85
-        const alpha = baseAlpha + ((maxAlpha - baseAlpha) * (Math.sin(t * 2.5 + p.alphaPhase) + 1)) / 2
+        const alpha =
+          baseAlpha + ((maxAlpha - baseAlpha) * (Math.sin(t * 2.5 + p.alphaPhase) + 1)) / 2
 
         ctx.beginPath()
         ctx.arc(x, y, p.size, 0, Math.PI * 2)
 
-        if (typeof p.color === 'string') {
-          ctx.fillStyle = `rgba(255, 255, 255, ${alpha})`
-        } else {
-          ctx.fillStyle = rgba(p.color, alpha)
-        }
+        ctx.fillStyle = rgba(p.color, alpha)
         ctx.fill()
 
         // Tiny outer halo for the larger ones
         if (p.size > 3) {
           ctx.beginPath()
           ctx.arc(x, y, p.size * 2, 0, Math.PI * 2)
-          const haloColor = typeof p.color === 'string' ? EMERALD : p.color
-          ctx.fillStyle = rgba(haloColor, alpha * 0.25)
+          ctx.fillStyle = rgba(p.color, alpha * 0.25)
           ctx.fill()
         }
       })

@@ -32,7 +32,8 @@ export const highlightedSkills = new Set([
 export const skillDetails: Record<string, SkillDetail> = {
   Angular: {
     name: 'Angular',
-    summary: 'Primary enterprise frontend framework for complex workflows, data grids, forms, routing, and modular UI.',
+    summary:
+      'Primary enterprise frontend framework for complex workflows, data grids, forms, routing, and modular UI.',
     seniorUsage:
       'Used to own production features across payments, finance analytics, servicing, warehouse, kiosk, and media workflows with reusable components, route guards, state patterns, and API-connected screens.',
     usedInProjects: [
@@ -49,12 +50,19 @@ export const skillDetails: Record<string, SkillDetail> = {
   },
   React: {
     name: 'React',
-    summary: 'Modern component-driven UI development with TypeScript and maintainable frontend composition.',
+    summary:
+      'Modern component-driven UI development with TypeScript and maintainable frontend composition.',
     seniorUsage:
       'Used as part of frontend engineering depth for reusable UI patterns, stateful product experiences, and modern TypeScript implementation practices.',
     usedInProjects: ['Enterprise web delivery', 'Portfolio implementation'],
     domains: ['Enterprise UI', 'Frontend Architecture'],
-    relatedSkills: ['TypeScript', 'Redux Toolkit', 'React Router', 'React Hook Form', 'Tailwind CSS'],
+    relatedSkills: [
+      'TypeScript',
+      'Redux Toolkit',
+      'React Router',
+      'React Hook Form',
+      'Tailwind CSS',
+    ],
     highlight: true,
   },
   TypeScript: {
@@ -62,7 +70,12 @@ export const skillDetails: Record<string, SkillDetail> = {
     summary: 'Strong typing for scalable frontend and full-stack implementation.',
     seniorUsage:
       'Applied to reduce integration risk, clarify UI contracts, improve refactoring safety, and support typed API-driven workflows across frontend and backend-connected features.',
-    usedInProjects: ['Enterprise Payments Platform', 'IPO Analysis Platform', 'Credit Card Servicing', 'Media Content Platform'],
+    usedInProjects: [
+      'Enterprise Payments Platform',
+      'IPO Analysis Platform',
+      'Credit Card Servicing',
+      'Media Content Platform',
+    ],
     domains: ['Finance', 'Banking', 'Retail', 'Media'],
     relatedSkills: ['Angular', 'React', 'OpenAPI/Swagger', 'Node.js'],
     highlight: true,
@@ -183,7 +196,8 @@ export const skillDetails: Record<string, SkillDetail> = {
   },
   Android: {
     name: 'Android',
-    summary: 'Android application delivery for kiosk, warehouse, and cross-platform servicing workflows.',
+    summary:
+      'Android application delivery for kiosk, warehouse, and cross-platform servicing workflows.',
     seniorUsage:
       'Delivered Android functionality connected to backend APIs, barcode scanning, device workflows, and operational retail/warehouse use cases.',
     usedInProjects: ['Credit Card Servicing', 'Warehouse Application', 'Product Lookup Kiosk'],
@@ -213,7 +227,11 @@ export const skillDetails: Record<string, SkillDetail> = {
     summary: 'Delivery collaboration for production-ready enterprise releases.',
     seniorUsage:
       'Worked with automated delivery practices, code reviews, quality gates, defect resolution, and release readiness across complex enterprise teams.',
-    usedInProjects: ['Enterprise Payments Platform', 'Media Content Platform', 'Enterprise web/mobile delivery'],
+    usedInProjects: [
+      'Enterprise Payments Platform',
+      'Media Content Platform',
+      'Enterprise web/mobile delivery',
+    ],
     domains: ['Banking', 'Finance', 'Media', 'Retail'],
     relatedSkills: ['Git', 'GitHub', 'Jira', 'Testing'],
     highlight: true,
@@ -223,7 +241,11 @@ export const skillDetails: Record<string, SkillDetail> = {
     summary: 'AI-supported engineering workflows with human review and production judgment.',
     seniorUsage:
       'Applied AI to accelerate discovery, implementation, debugging, refactoring, test scaffolding, documentation, and review preparation while preserving architecture ownership.',
-    usedInProjects: ['Enterprise Payments Platform', 'Portfolio implementation', 'Modern engineering workflows'],
+    usedInProjects: [
+      'Enterprise Payments Platform',
+      'Portfolio implementation',
+      'Modern engineering workflows',
+    ],
     domains: ['Enterprise Software', 'Frontend Architecture', 'Full-stack Delivery'],
     relatedSkills: ['GitHub Copilot', 'OpenAI Codex', 'Cloud Code', 'Gemini-based workflows'],
     highlight: true,
@@ -314,7 +336,16 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     title: 'Mobile',
-    skills: ['Ionic', 'Cordova', 'Capacitor', 'iOS', 'Android', 'Xcode', 'Android Studio', 'TestFlight'],
+    skills: [
+      'Ionic',
+      'Cordova',
+      'Capacitor',
+      'iOS',
+      'Android',
+      'Xcode',
+      'Android Studio',
+      'TestFlight',
+    ],
   },
   {
     title: 'Security / Auth',

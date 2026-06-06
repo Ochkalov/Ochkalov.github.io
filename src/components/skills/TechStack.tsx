@@ -81,7 +81,9 @@ export function TechStack() {
         }
 
         setInspectorPosition((current) =>
-          current?.left === nextPosition.left && current.width === nextPosition.width ? current : nextPosition,
+          current?.left === nextPosition.left && current.width === nextPosition.width
+            ? current
+            : nextPosition,
         )
       })
     }
@@ -121,7 +123,9 @@ export function TechStack() {
                       groupTitle={group.title}
                       isActive={selectedSkill === skillName}
                       isPreviewed={previewedSkill === skillName}
-                      onSelect={(nextSkill) => setSelectedSkill((current) => (current === nextSkill ? null : nextSkill))}
+                      onSelect={(nextSkill) =>
+                        setSelectedSkill((current) => (current === nextSkill ? null : nextSkill))
+                      }
                       onPreview={setPreviewedSkill}
                       onPreviewEnd={() => setPreviewedSkill(null)}
                     />
@@ -158,9 +162,14 @@ export function TechStack() {
             >
               <div className="flex items-start justify-between gap-3">
                 <div className="flex items-center gap-3">
-                  <IconBadge icon={MousePointer2} tone={activeSkill.detail.highlight ? 'emerald' : 'cyan'} />
+                  <IconBadge
+                    icon={MousePointer2}
+                    tone={activeSkill.detail.highlight ? 'emerald' : 'cyan'}
+                  />
                   <div>
-                    <p className="text-xs font-bold uppercase text-amber">{activeSkill.groupTitle}</p>
+                    <p className="text-xs font-bold uppercase text-amber">
+                      {activeSkill.groupTitle}
+                    </p>
                     <h3 className="mt-1 text-xl font-black text-ink">{activeSkill.detail.name}</h3>
                   </div>
                 </div>
