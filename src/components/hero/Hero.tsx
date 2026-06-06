@@ -22,7 +22,7 @@ function renderHeadline() {
 }
 
 function renderSubheadline() {
-  const [prefix, rest] = profile.hero.subheadline.split('10 years')
+  const [prefix, rest] = profile.hero.subheadline.split(profile.hero.experiencePhrase)
 
   if (!rest) {
     return profile.hero.subheadline
@@ -31,7 +31,7 @@ function renderSubheadline() {
   return (
     <>
       {prefix}
-      <span className="font-bold text-amber">10 years</span>
+      <span className="font-bold text-amber">{profile.hero.experiencePhrase}</span>
       {rest}
     </>
   )
@@ -68,7 +68,7 @@ export function Hero() {
                 external
                 variant="ghost"
                 icon={<ExternalLink size={16} aria-hidden="true" />}
-                ariaLabel="Connect with Yurii Ochkalov on LinkedIn"
+                ariaLabel="Connect on LinkedIn"
               >
                 Connect on LinkedIn
               </Button>

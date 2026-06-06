@@ -242,7 +242,7 @@ export function getSkillDetail(skill: SkillItem, groupTitle = 'Engineering') {
   return (
     skillDetails[skill] ?? {
       name: skill,
-      summary: `${skill} is part of Yurii's ${groupTitle.toLowerCase()} toolkit.`,
+      summary: `${skill} is part of the ${groupTitle.toLowerCase()} toolkit.`,
       seniorUsage:
         'Used as part of enterprise delivery across frontend, backend, mobile, testing, integration, or production-readiness workflows.',
       usedInProjects: ['Enterprise delivery work'],

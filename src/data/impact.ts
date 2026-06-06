@@ -13,6 +13,7 @@ import {
   Smartphone,
 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
+import { getExperienceYears } from '../utils/experienceDuration'
 
 export interface Metric {
   label: string
@@ -37,8 +38,16 @@ export interface ImpactItem {
   }
 }
 
+const experienceYears = getExperienceYears()
+
 export const heroMetrics: Metric[] = [
-  { label: 'Years Experience', value: 10, description: 'Enterprise delivery across web, backend, and mobile', icon: Boxes },
+  {
+    label: 'Years Experience',
+    value: experienceYears,
+    suffix: '+',
+    description: 'Calculated from first frontend role',
+    icon: Boxes,
+  },
   { label: 'Attribute Workflows', value: 200, suffix: '+', description: 'Large data-heavy enterprise UI workflows', icon: DatabaseZap },
   { label: 'Engineering Teams Collaborated', value: 6, suffix: '+', description: 'Cross-team delivery and API alignment', icon: GitBranch },
   { label: 'Greenfield Micro-frontends', value: 3, description: 'From initial implementation to production', icon: Layers3 },

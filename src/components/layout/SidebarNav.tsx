@@ -12,7 +12,7 @@ export function SidebarNav({ activeSection }: SidebarNavProps) {
     <aside className="fixed inset-y-3 left-3 z-30 hidden w-[92px] rounded-lg border border-line bg-charcoal/78 shadow-panel backdrop-blur-xl lg:flex lg:flex-col">
       <a
         href="#home"
-        aria-label="Yurii Ochkalov home"
+        aria-label="Portfolio home"
         className="mx-auto mt-6 flex size-12 items-center justify-center rounded-lg border border-amber/35 bg-amber/8 text-lg font-black text-amber shadow-amber focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald"
       >
         {profile.initials}
@@ -50,7 +50,7 @@ export function SidebarNav({ activeSection }: SidebarNavProps) {
             href={profile.linkedInUrl}
             target="_blank"
             rel="noreferrer"
-            aria-label="Connect with Yurii Ochkalov on LinkedIn"
+            aria-label="Connect on LinkedIn"
             className="flex size-9 items-center justify-center rounded-md border border-cyan/25 bg-cyan/8 text-cyan transition hover:border-cyan/55 hover:bg-cyan/12 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald"
           >
             <span aria-hidden="true" className="font-mono text-sm font-black">
@@ -61,7 +61,7 @@ export function SidebarNav({ activeSection }: SidebarNavProps) {
             href={profile.github.url}
             target="_blank"
             rel="noreferrer"
-            aria-label="View Yurii Ochkalov GitHub profile placeholder"
+            aria-label="View GitHub profile"
             className="flex size-9 items-center justify-center rounded-md border border-white/12 bg-white/[0.045] text-ink transition hover:border-amber/45 hover:text-amber focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald"
           >
             <Code2 size={18} aria-hidden="true" />

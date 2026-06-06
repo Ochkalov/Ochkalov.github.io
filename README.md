@@ -1,8 +1,8 @@
-# Yurii Ochkalov Portfolio
+# Senior Software Engineer Portfolio
 
-Static personal portfolio website for Yurii Ochkalov, built with React, TypeScript, Vite, Tailwind CSS, Motion, and Lucide React.
+Static senior engineering portfolio website built with React, TypeScript, Vite, Tailwind CSS, Motion, and Lucide React.
 
-The site is designed for GitHub Pages and intentionally avoids exposing private contact details. LinkedIn is the primary contact path, and the GitHub URL is a configurable placeholder until the exact profile is confirmed.
+The site is designed for GitHub Pages and intentionally avoids exposing private contact details. LinkedIn is the primary contact path, and GitHub is configured through `src/data/profile.ts`.
 
 ## Local Development
 
@@ -39,7 +39,7 @@ VITE_BASE_PATH=/your-repo-name/ npm run build
 
 Profile, links, metrics, experience, skills, projects, impact statements, and AI tooling are stored in `src/data`.
 
-- Update LinkedIn or the GitHub placeholder in `src/data/profile.ts`.
+- Update LinkedIn or GitHub links in `src/data/profile.ts`.
 - Keep all public content privacy-safe.
 - Do not add a direct contact address or phone number to rendered UI, metadata, structured data, or downloadable assets.
 

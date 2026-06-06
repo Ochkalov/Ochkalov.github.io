@@ -1,4 +1,4 @@
-import { CalendarRange, GraduationCap, Landmark } from 'lucide-react'
+import { GraduationCap, Landmark } from 'lucide-react'
 import { profile } from '../../data/profile'
 import { Badge } from '../ui/Badge'
 import { GlassPanel } from '../ui/GlassPanel'
@@ -9,7 +9,7 @@ export function EducationCard() {
 
   return (
     <GlassPanel accent="amber" className="p-6 sm:p-7">
-      <div className="grid gap-5 md:grid-cols-[auto_1fr_auto] md:items-center">
+      <div className="grid gap-5 md:grid-cols-[auto_1fr] md:items-center">
         <IconBadge icon={GraduationCap} tone="amber" className="size-12" />
 
         <div>
@@ -22,12 +22,6 @@ export function EducationCard() {
           </p>
         </div>
 
-        <div className="rounded-md border border-amber/18 bg-amber/[0.045] px-4 py-3 text-sm font-semibold text-amber shadow-[inset_0_1px_0_rgba(255,255,255,0.035)]">
-          <span className="flex items-center gap-2">
-            <CalendarRange size={15} aria-hidden="true" />
-            {education.dates}
-          </span>
-        </div>
       </div>
     </GlassPanel>
   )

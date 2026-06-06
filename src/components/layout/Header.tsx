@@ -13,7 +13,7 @@ export function Header({ activeSection }: HeaderProps) {
       <div className="flex h-16 items-center gap-3 px-4">
         <a
           href="#home"
-          aria-label="Yurii Ochkalov home"
+          aria-label="Portfolio home"
           className="flex size-10 shrink-0 items-center justify-center rounded-lg border border-amber/35 bg-amber/8 text-sm font-black text-amber"
         >
           {profile.initials}
@@ -40,7 +40,7 @@ export function Header({ activeSection }: HeaderProps) {
             href={profile.linkedInUrl}
             target="_blank"
             rel="noreferrer"
-            aria-label="Connect with Yurii Ochkalov on LinkedIn"
+            aria-label="Connect on LinkedIn"
             className="hidden size-9 items-center justify-center rounded-md border border-cyan/25 bg-cyan/8 text-cyan min-[420px]:flex"
           >
             <span aria-hidden="true" className="font-mono text-xs font-black">
@@ -51,7 +51,7 @@ export function Header({ activeSection }: HeaderProps) {
             href={profile.github.url}
             target="_blank"
             rel="noreferrer"
-            aria-label="View Yurii Ochkalov GitHub profile placeholder"
+            aria-label="View GitHub profile"
             className="hidden size-9 items-center justify-center rounded-md border border-white/12 bg-white/[0.045] text-ink min-[520px]:flex"
           >
             <Code2 size={17} aria-hidden="true" />

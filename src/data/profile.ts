@@ -1,5 +1,6 @@
+import { formatExperienceYearsPlus } from '../utils/experienceDuration'
+
 export interface Profile {
-  name: string
   initials: string
   role: string
   location: string
@@ -13,6 +14,7 @@ export interface Profile {
     eyebrow: string
     headline: string
     highlightedPhrase: string
+    experiencePhrase: string
     subheadline: string
   }
   brief: string[]
@@ -25,30 +27,30 @@ export interface Profile {
     institutionLabel: string
     credential: string
     focus: string
-    dates: string
   }
 }
 
+const experienceYearsPlus = formatExperienceYearsPlus()
+
 export const profile: Profile = {
-  name: 'Yurii Ochkalov',
   initials: 'YO',
   role: 'Senior Software Engineer',
   location: 'New York, USA',
   linkedInUrl: 'https://www.linkedin.com/in/ochkalov',
   github: {
     label: 'GitHub',
-    url: 'https://github.com/YOUR_GITHUB_USERNAME',
-    isPlaceholder: true,
+    url: 'https://github.com/Ochkalov',
+    isPlaceholder: false,
   },
   hero: {
     eyebrow: 'Senior Software Engineer',
     headline: 'I build scalable software systems that create measurable impact.',
     highlightedPhrase: 'measurable impact',
-    subheadline:
-      '10 years delivering enterprise web, backend, and mobile applications across finance, banking, retail, healthcare, warehouse management, and media.',
+    experiencePhrase: experienceYearsPlus,
+    subheadline: `${experienceYearsPlus} delivering enterprise web, backend, and mobile applications across finance, banking, retail, healthcare, warehouse management, and media.`,
   },
   brief: [
-    'Senior Software Engineer with 10 years of experience designing, building, and modernizing enterprise web, backend, and mobile applications across finance, banking, retail, healthcare, warehouse management, and media domains.',
+    `Senior Software Engineer with ${experienceYearsPlus} of experience designing, building, and modernizing enterprise web, backend, and mobile applications across finance, banking, retail, healthcare, warehouse management, and media domains.`,
     'Strong frontend engineering depth with practical full-stack delivery experience across Angular, React, TypeScript, JavaScript, Node.js, Express, REST APIs, .NET Web APIs, C#, Java/Spring Boot-based services, SQL Server, cloud platforms, and CI/CD.',
     'Known for translating complex business workflows into scalable, maintainable software solutions, collaborating across product, UX, backend, QA, and multiple engineering teams, and applying AI-assisted engineering workflows to accelerate discovery, implementation, debugging, refactoring, testing, and documentation while maintaining code review and production-quality standards.',
   ],
@@ -66,6 +68,5 @@ export const profile: Profile = {
     institutionLabel: 'University',
     credential: 'Master’s Degree',
     focus: 'Engineering / Finance',
-    dates: 'Sep 2002 – Jan 2010',
   },
 }

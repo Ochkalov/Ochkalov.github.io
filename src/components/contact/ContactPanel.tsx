@@ -36,7 +36,7 @@ export function ContactPanel() {
             external
             variant="primary"
             icon={<ExternalLink size={16} aria-hidden="true" />}
-            ariaLabel="Connect with Yurii Ochkalov on LinkedIn"
+            ariaLabel="Connect on LinkedIn"
           >
             Connect on LinkedIn
           </Button>
@@ -45,7 +45,7 @@ export function ContactPanel() {
             external
             variant="secondary"
             icon={<Code2 size={16} aria-hidden="true" />}
-            ariaLabel="View Yurii Ochkalov GitHub profile placeholder"
+            ariaLabel="View GitHub profile"
           >
             View GitHub
           </Button>
@@ -54,7 +54,7 @@ export function ContactPanel() {
               href={`${import.meta.env.BASE_URL}resume.pdf`}
               variant="ghost"
               icon={<Download size={16} aria-hidden="true" />}
-              ariaLabel="Download Yurii Ochkalov resume"
+              ariaLabel="Download resume"
             >
               Download Resume
             </Button>
