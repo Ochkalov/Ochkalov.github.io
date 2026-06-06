@@ -102,31 +102,16 @@ a {
     33px 33px;
 }
 
-.isometric-cube {
-  width: 92px;
-  height: 92px;
-  transform-style: preserve-3d;
+/* ── hero label interactive glow ── */
+.hero-label {
+  transition:
+    box-shadow 300ms ease,
+    transform 300ms ease,
+    background 300ms ease;
 }
 
-.isometric-cube::before,
-.isometric-cube::after {
-  position: absolute;
-  content: '';
-  inset: 0;
-  border: 1px solid rgba(94, 234, 212, 0.42);
-  background: linear-gradient(135deg, rgba(20, 241, 149, 0.32), rgba(94, 234, 212, 0.06));
-}
-
-.isometric-cube::before {
-  transform: rotate(45deg) skew(-18deg, -18deg);
-  box-shadow:
-    inset 0 0 28px rgba(20, 241, 149, 0.2),
-    0 0 26px rgba(20, 241, 149, 0.16);
-}
-
-.isometric-cube::after {
-  transform: rotate(45deg) translate(20px, 20px) skew(-18deg, -18deg);
-  background: linear-gradient(135deg, rgba(246, 195, 67, calc(0.18 + var(--cube-index) * 0.05)), rgba(20, 241, 149, 0.08));
+.hero-label:hover {
+  cursor: default;
 }
 
 .glass-panel {
