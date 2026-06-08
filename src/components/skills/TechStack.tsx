@@ -23,18 +23,11 @@ function buildSkillLookup() {
   return lookup
 }
 
-interface InspectorPosition {
-  left: number
-  width: number
-}
-
 export function TechStack() {
   const skillLookup = useMemo(() => buildSkillLookup(), [])
   const stackRef = useRef<HTMLDivElement>(null)
-  const inspectorSlotRef = useRef<HTMLDivElement>(null)
   const [selectedSkill, setSelectedSkill] = useState<string | null>('Angular')
   const [previewedSkill, setPreviewedSkill] = useState<string | null>(null)
-  const [inspectorPosition, setInspectorPosition] = useState<InspectorPosition | null>(null)
   const activeSkillName = previewedSkill ?? selectedSkill ?? 'Angular'
   const activeSkill = skillLookup.get(activeSkillName) ?? skillLookup.get('Angular')
 
@@ -50,59 +43,8 @@ export function TechStack() {
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [])
 
-  useEffect(() => {
-    let frame = 0
-    const desktopQuery = window.matchMedia('(min-width: 1280px)')
-
-    const updateInspectorPosition = () => {
-      window.cancelAnimationFrame(frame)
-      frame = window.requestAnimationFrame(() => {
-        const stack = stackRef.current
-        const slot = inspectorSlotRef.current
-
-        if (!stack || !slot || !desktopQuery.matches) {
-          setInspectorPosition(null)
-          return
-        }
-
-        const stackRect = stack.getBoundingClientRect()
-        const slotRect = slot.getBoundingClientRect()
-        const topOffset = 96
-        const shouldPin = stackRect.top <= topOffset && stackRect.bottom > 220
-
-        if (!shouldPin) {
-          setInspectorPosition(null)
-          return
-        }
-
-        const nextPosition = {
-          left: Math.round(slotRect.left),
-          width: Math.round(slotRect.width),
-        }
-
-        setInspectorPosition((current) =>
-          current?.left === nextPosition.left && current.width === nextPosition.width
-            ? current
-            : nextPosition,
-        )
-      })
-    }
-
-    updateInspectorPosition()
-    window.addEventListener('scroll', updateInspectorPosition, { passive: true })
-    window.addEventListener('resize', updateInspectorPosition)
-    desktopQuery.addEventListener('change', updateInspectorPosition)
-
-    return () => {
-      window.cancelAnimationFrame(frame)
-      window.removeEventListener('scroll', updateInspectorPosition)
-      window.removeEventListener('resize', updateInspectorPosition)
-      desktopQuery.removeEventListener('change', updateInspectorPosition)
-    }
-  }, [])
-
   return (
-    <div ref={stackRef} className="grid items-start gap-4 xl:grid-cols-[minmax(0,1fr)_360px]">
+    <div ref={stackRef} className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_360px]">
       <div className="grid gap-4 lg:grid-cols-2">
         {skillGroups.map((group, index) => (
           <GlassPanel
@@ -138,21 +80,10 @@ export function TechStack() {
       </div>
 
       {activeSkill ? (
-        <div ref={inspectorSlotRef} className="xl:min-h-px">
+        <div className="xl:sticky xl:top-24 xl:self-start xl:max-h-[calc(100vh-8rem)] xl:overflow-y-auto xl:overscroll-contain">
           <GlassPanel
             accent="cyan"
-            className={cn(
-              'h-fit p-5 xl:max-h-[calc(100vh-7rem)] xl:self-start xl:overflow-y-auto xl:overscroll-contain',
-              inspectorPosition ? 'xl:fixed xl:top-24 xl:z-30' : 'xl:sticky xl:top-24',
-            )}
-            style={
-              inspectorPosition
-                ? {
-                    left: inspectorPosition.left,
-                    width: inspectorPosition.width,
-                  }
-                : undefined
-            }
+            className="h-fit p-5"
           >
             <motion.div
               key={activeSkill.detail.name}
