@@ -48,28 +48,31 @@ export function FloatingParticles() {
     })
 
     let t = 0
+
+    // Define page-relative geometric constellation hubs at key Y-positions
+    // Moved outside the render loop to prevent garbage collection overhead
+    const hubs = [
+      { xPercent: 0.82, yPage: 400, speed: 0.06, color: EMERALD },
+      { xPercent: 0.15, yPage: 1250, speed: -0.04, color: CYAN },
+      { xPercent: 0.78, yPage: 2300, speed: 0.05, color: AMBER },
+      { xPercent: 0.18, yPage: 3450, speed: -0.05, color: EMERALD },
+      { xPercent: 0.85, yPage: 4800, speed: 0.04, color: CYAN },
+      { xPercent: 0.12, yPage: 6300, speed: -0.06, color: AMBER },
+      { xPercent: 0.75, yPage: 7800, speed: 0.05, color: EMERALD },
+      { xPercent: 0.5, yPage: 9100, speed: -0.04, color: CYAN },
+    ]
+
     const animate = () => {
       t += 0.003
-      const cw = canvas.width / Math.min(window.devicePixelRatio, 2)
-      const ch = canvas.height / Math.min(window.devicePixelRatio, 2)
+      const dpr = Math.min(window.devicePixelRatio, 2)
+      const cw = canvas.width / dpr
+      const ch = canvas.height / dpr
       const sy = window.scrollY
 
       // Update docHeight in case of resize/load
       docHeight = document.documentElement.scrollHeight || 9600
 
       ctx.clearRect(0, 0, cw, ch)
-
-      // Define page-relative geometric constellation hubs at key Y-positions
-      const hubs = [
-        { xPercent: 0.82, yPage: 400, speed: 0.06, color: EMERALD },
-        { xPercent: 0.15, yPage: 1250, speed: -0.04, color: CYAN },
-        { xPercent: 0.78, yPage: 2300, speed: 0.05, color: AMBER },
-        { xPercent: 0.18, yPage: 3450, speed: -0.05, color: EMERALD },
-        { xPercent: 0.85, yPage: 4800, speed: 0.04, color: CYAN },
-        { xPercent: 0.12, yPage: 6300, speed: -0.06, color: AMBER },
-        { xPercent: 0.75, yPage: 7800, speed: 0.05, color: EMERALD },
-        { xPercent: 0.5, yPage: 9100, speed: -0.04, color: CYAN },
-      ]
 
       // Update particles positions & wrap around
       particles.forEach((p) => {

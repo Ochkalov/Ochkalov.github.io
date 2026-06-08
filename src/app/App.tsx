@@ -9,6 +9,7 @@ import { CapabilityHighlights } from '../components/overview/CapabilityHighlight
 import { ProfessionalBrief } from '../components/overview/ProfessionalBrief'
 import { FeaturedProjects } from '../components/projects/FeaturedProjects'
 import { TechStack } from '../components/skills/TechStack'
+import { AILabs } from '../components/labs/AILabs'
 import { AppLayout } from './AppLayout'
 
 export default function App() {
@@ -35,6 +36,13 @@ export default function App() {
       </Section>
       <Section id="skills" title="Technical Stack">
         <TechStack />
+      </Section>
+      <Section
+        id="labs"
+        title="AI Engineering Labs"
+        intro="A collection of advanced R&D platforms exploring agentic research automation, leakage-proof model auditing, collaborative media pipelines, and structured knowledge graphs."
+      >
+        <AILabs />
       </Section>
       <Section id="experience" title="Experience">
         <ExperienceTimeline />
