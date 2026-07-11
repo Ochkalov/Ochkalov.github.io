@@ -26,9 +26,9 @@ export const projects: Project[] = [
     title: 'Enterprise Payments Platform',
     client: 'BNY Mellon',
     description:
-      'Large-scale internal payments platform with modular frontend architecture, configurable business behavior, data-intensive operational workflows, Java/Spring Boot service integration, and OpenAPI-driven API contracts.',
+      'Large-scale internal payments platform with Angular, TypeScript, RxJS, NgRx, modular frontend architecture, configurable business behavior, data-intensive operational workflows, Java/Spring Boot service integration, and OpenAPI-driven API contracts.',
     detail:
-      'Owned enterprise payment workflows across Angular UI modules, Native Federation-based micro-frontends, reusable patterns, Ag-Grid/Highcharts experiences, backend/API integration, validation, typed client workflows, and release readiness in a regulated banking environment.',
+      'Owned enterprise payment workflows across Angular UI modules, standalone components and Angular Signals, Native Federation-based micro-frontends, Nx-based monorepo patterns, reusable UI patterns, Ag-Grid/Highcharts experiences, backend/API integration, validation, typed client workflows, and release readiness in a regulated banking environment.',
     tags: [
       'Angular',
       'Java/Spring Boot',
@@ -49,7 +49,7 @@ export const projects: Project[] = [
     title: 'IPO Analysis Platform',
     client: 'S&P Global',
     description:
-      'Data-intensive IPO analysis system supporting complex financial analytics, modernization, .NET Web API/C# integration, SQL-backed workflows, charting, and analytical user experiences.',
+      'Data-intensive IPO analysis system supporting complex financial analytics, 200+ attributes, modernization, .NET Web API/C# integration, SQL-backed workflows, charting, and analytical user experiences.',
     detail:
       'Combined frontend modernization with full-stack delivery for financial users, integrating REST APIs, .NET Web APIs, C#, SQL-backed data, Highcharts visualizations, and complex analytical workflows.',
     tags: ['Angular', '.NET Web APIs', 'C#', 'Highcharts', 'REST APIs', 'SQL'],
@@ -73,7 +73,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Media Content Platform',
-    client: 'GT Images / Luxoft / DXC Technology',
+    client: 'Getty Images / Luxoft / DXC Technology',
     description:
       'High-traffic visual content platform supporting content hosting, search, licensing, sales workflows, frontend feature delivery, reusable UI components, and backend-driven integrations.',
     detail:

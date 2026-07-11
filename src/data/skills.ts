@@ -16,9 +16,11 @@ export interface SkillGroup {
 }
 
 export const highlightedSkills = new Set([
-  'React',
   'Angular',
   'TypeScript',
+  'RxJS',
+  'NgRx',
+  'React',
   'Micro-frontends',
   'AI-assisted engineering',
   'Ag-Grid',
@@ -166,6 +168,61 @@ export const skillDetails: Record<string, SkillDetail> = {
     domains: ['Retail', 'Warehouse Management', 'Events'],
     relatedSkills: ['Express.js', 'REST APIs', 'Docker', 'JavaScript'],
   },
+  Nx: {
+    name: 'Nx',
+    summary: 'Monorepo tooling for modular frontend systems and shared libraries.',
+    seniorUsage:
+      'Used with modular frontend applications to organize shared libraries, enforce boundaries, and coordinate builds across independently deployable capabilities.',
+    usedInProjects: ['Enterprise Payments Platform', 'Enterprise modernization'],
+    domains: ['Banking', 'Finance', 'Frontend Architecture'],
+    relatedSkills: ['Monorepos', 'Micro-frontends', 'Shared Libraries', 'Angular'],
+  },
+  Python: {
+    name: 'Python',
+    summary: 'Backend, automation, and data processing for independent full-stack systems.',
+    seniorUsage:
+      'Used in AI-first applications and data pipelines for service implementation, validation, analysis, reporting, and operational automation.',
+    usedInProjects: ['Health Intelligence Platform', 'AI-first full-stack applications'],
+    domains: ['AI Engineering', 'Data Processing', 'Full-stack Delivery'],
+    relatedSkills: ['FastAPI', 'PostgreSQL', 'Docker', 'Pandas'],
+  },
+  FastAPI: {
+    name: 'FastAPI',
+    summary: 'Typed Python APIs for independent full-stack and data-oriented applications.',
+    seniorUsage:
+      'Used to build backend service layers that support validation, data workflows, reporting, and frontend-connected application features.',
+    usedInProjects: ['Health Intelligence Platform', 'AI-first full-stack applications'],
+    domains: ['AI Engineering', 'Health Analytics', 'Full-stack Delivery'],
+    relatedSkills: ['Python', 'REST APIs', 'PostgreSQL', 'Docker'],
+  },
+  PostgreSQL: {
+    name: 'PostgreSQL',
+    summary: 'Relational persistence for production-shaped independent applications.',
+    seniorUsage:
+      'Used with application backends, schema-driven persistence, and operational workflows that require durable structured data.',
+    usedInProjects: ['AI Content Operations Platform', 'AI-first full-stack applications'],
+    domains: ['Full-stack Delivery', 'Data Persistence'],
+    relatedSkills: ['Prisma', 'NestJS', 'Docker', 'REST APIs'],
+  },
+  Prisma: {
+    name: 'Prisma',
+    summary: 'Type-safe data access for full-stack application persistence.',
+    seniorUsage:
+      'Used to model and access relational application data in independent systems with maintainable backend boundaries.',
+    usedInProjects: ['AI Content Operations Platform', 'AI-first full-stack applications'],
+    domains: ['Full-stack Delivery', 'Data Persistence'],
+    relatedSkills: ['PostgreSQL', 'NestJS', 'TypeScript'],
+  },
+  Playwright: {
+    name: 'Playwright',
+    summary:
+      'Browser automation and end-to-end verification for application and operational workflows.',
+    seniorUsage:
+      'Used for end-to-end testing, visual checks, browser-based data collection, and deployment verification with human-reviewed validation paths.',
+    usedInProjects: ['AI Career Operations Platform', 'Independent application workflows'],
+    domains: ['Testing', 'Automation', 'AI Engineering'],
+    relatedSkills: ['Vitest', 'Cypress', 'Node.js', 'MCP & local LLM workflows'],
+  },
   Ionic: {
     name: 'Ionic',
     summary: 'Cross-platform mobile delivery from a shared codebase.',
@@ -247,7 +304,19 @@ export const skillDetails: Record<string, SkillDetail> = {
       'Modern engineering workflows',
     ],
     domains: ['Enterprise Software', 'Frontend Architecture', 'Full-stack Delivery'],
-    relatedSkills: ['GitHub Copilot', 'OpenAI Codex', 'Cloud Code', 'Gemini-based workflows'],
+    relatedSkills: [
+      'OpenAI Codex',
+      'GitHub Copilot',
+      'Claude Code',
+      'Cloud Code',
+      'Google Gemini',
+      'Google Antigravity',
+      'Windsurf',
+      'OpenCode',
+      'OpenClaw',
+      'Hermes Agent',
+      'MCP & local LLM workflows',
+    ],
     highlight: true,
   },
 }
@@ -279,11 +348,11 @@ export const skillGroups: SkillGroup[] = [
     title: 'Frontend',
     skills: [
       'Angular',
-      'React',
       'TypeScript',
       'JavaScript',
       'RxJS',
       'NgRx',
+      'React',
       'Redux Toolkit',
       'React Router',
       'React Hook Form',
@@ -307,8 +376,14 @@ export const skillGroups: SkillGroup[] = [
       'C#',
       'Java/Spring Boot',
       'Maven',
+      'Python',
+      'FastAPI',
+      'WebSockets',
+      'SSE',
       'SQL',
       'SQL Server',
+      'PostgreSQL',
+      'Prisma',
     ],
   },
   {
@@ -321,6 +396,8 @@ export const skillGroups: SkillGroup[] = [
       'Micro-frontends',
       'Module Federation',
       'Native Federation',
+      'Nx',
+      'Monorepos',
       'Shared Libraries',
       'API Contracts',
       'Enterprise UI Architecture',
@@ -328,11 +405,11 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     title: 'Cloud & DevOps',
-    skills: ['AWS', 'Azure', 'Docker', 'CI/CD', 'Git', 'GitHub', 'Jira'],
+    skills: ['AWS', 'Azure', 'Cloudflare', 'Docker', 'CI/CD', 'Git', 'GitHub', 'Jira'],
   },
   {
     title: 'Testing',
-    skills: ['Jest', 'Cypress', 'Jasmine', 'Mocha', 'Sinon.js'],
+    skills: ['Playwright', 'Cypress', 'Vitest', 'Jest', 'Jasmine', 'Karma', 'Mocha', 'Sinon.js'],
   },
   {
     title: 'Mobile',
@@ -354,10 +431,17 @@ export const skillGroups: SkillGroup[] = [
   {
     title: 'AI / Productivity',
     skills: [
-      'GitHub Copilot',
       'OpenAI Codex',
+      'GitHub Copilot',
+      'Claude Code',
       'Cloud Code',
-      'Gemini-based workflows',
+      'Google Gemini',
+      'Google Antigravity',
+      'Windsurf',
+      'OpenCode',
+      'OpenClaw',
+      'Hermes Agent',
+      'MCP & local LLM workflows',
       'AI-assisted engineering',
       'Agent-assisted development',
     ],

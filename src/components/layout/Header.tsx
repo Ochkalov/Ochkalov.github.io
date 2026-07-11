@@ -1,4 +1,4 @@
-import { Code2, Menu } from 'lucide-react'
+import { Code2 } from 'lucide-react'
 import { profile } from '../../data/profile'
 import { cn } from '../ui/cn'
 import { navItems } from './navItems'
@@ -59,7 +59,6 @@ export function Header({ activeSection }: HeaderProps) {
           >
             <Code2 size={17} aria-hidden="true" />
           </a>
-          <Menu className="text-muted min-[720px]:hidden" size={18} aria-hidden="true" />
         </div>
       </div>
     </header>

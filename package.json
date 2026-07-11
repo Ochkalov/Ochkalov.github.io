@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "typecheck": "tsc -b",
     "lint": "eslint .",
+    "test:content": "node --test tests/portfolio-content.test.mjs",
     "format": "prettier --write ."
   },
   "dependencies": {

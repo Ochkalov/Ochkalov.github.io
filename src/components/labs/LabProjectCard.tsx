@@ -23,7 +23,7 @@ const PIPELINE_STEPS: Record<string, string[]> = {
 }
 
 const TONE_ORDER = ['emerald', 'amber', 'cyan'] as const
-type Tone = typeof TONE_ORDER[number]
+type Tone = (typeof TONE_ORDER)[number]
 
 const TONE_THEMES: Record<Tone, { container: string; dot: string; text: string }> = {
   emerald: {
@@ -44,7 +44,7 @@ const TONE_THEMES: Record<Tone, { container: string; dot: string; text: string }
 }
 
 export function LabProjectCard({ project, index }: LabProjectCardProps) {
-  const [isExpanded, setIsExpanded] = useState(true)
+  const [isExpanded, setIsExpanded] = useState(false)
 
   // Color theme mapping
   const tone = TONE_ORDER[index % 3]
@@ -62,19 +62,25 @@ export function LabProjectCard({ project, index }: LabProjectCardProps) {
         </h4>
         <div className="flex flex-col flex-wrap gap-2 md:flex-row md:items-center justify-between">
           {flowSteps.map((step, idx) => (
-            <div key={step} className="flex flex-1 items-center justify-between md:justify-start gap-2">
+            <div
+              key={step}
+              className="flex flex-1 items-center justify-between md:justify-start gap-2"
+            >
               <div
                 className={cn(
                   'flex-1 text-center rounded-md border py-1.5 px-2 text-[10px] font-mono font-semibold',
                   idx === flowSteps.length - 1
                     ? theme.container
-                    : 'border-white/10 bg-white/[0.02] text-ink'
+                    : 'border-white/10 bg-white/[0.02] text-ink',
                 )}
               >
                 {step}
               </div>
               {idx < flowSteps.length - 1 && (
-                <ArrowRight size={14} className="text-muted shrink-0 rotate-90 md:rotate-0 self-center mx-auto" />
+                <ArrowRight
+                  size={14}
+                  className="text-muted shrink-0 rotate-90 md:rotate-0 self-center mx-auto"
+                />
               )}
             </div>
           ))}
@@ -88,8 +94,8 @@ export function LabProjectCard({ project, index }: LabProjectCardProps) {
       <GlassPanel
         accent={tone}
         className={cn(
-          "group flex h-full flex-col p-5 transition-all duration-300 hover:border-line/30",
-          isExpanded ? "shadow-glow hover:shadow-glow border-line/25" : "hover:shadow-glow/5"
+          'group flex h-full flex-col p-5 transition-all duration-300 hover:border-line/30',
+          isExpanded ? 'shadow-glow hover:shadow-glow border-line/25' : 'hover:shadow-glow/5',
         )}
       >
         <div className="flex items-start justify-between">
@@ -118,7 +124,9 @@ export function LabProjectCard({ project, index }: LabProjectCardProps) {
 
                 {/* Architecture Checklist */}
                 <div className="mt-4">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-muted mb-2">System Architecture</h4>
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-muted mb-2">
+                    System Architecture
+                  </h4>
                   <ul className="space-y-1.5 text-xs text-muted/95 leading-relaxed">
                     {project.architecture.map((arch) => (
                       <li key={arch} className="flex items-start gap-2">
@@ -131,7 +139,9 @@ export function LabProjectCard({ project, index }: LabProjectCardProps) {
 
                 {/* Engineering & Resume Signals */}
                 <div className="mt-4">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-muted mb-2 font-mono">Key Capabilities</h4>
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-muted mb-2 font-mono">
+                    Key Capabilities
+                  </h4>
                   <ul className="space-y-1.5 text-xs text-muted/95 leading-relaxed">
                     {project.resumeSignals.map((sig) => (
                       <li key={sig} className="flex items-start gap-2">
@@ -157,11 +167,7 @@ export function LabProjectCard({ project, index }: LabProjectCardProps) {
 
         <div className="mt-4 flex flex-wrap gap-1.5">
           {project.tags.map((tag, tagIndex) => (
-            <Badge
-              key={tag}
-              tone={TONE_ORDER[tagIndex % 3]}
-              className="text-[10px] py-0.5"
-            >
+            <Badge key={tag} tone={TONE_ORDER[tagIndex % 3]} className="text-[10px] py-0.5">
               {tag}
             </Badge>
           ))}

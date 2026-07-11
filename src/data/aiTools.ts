@@ -27,64 +27,64 @@ export interface AIOutcome {
 
 export const aiTools: AITool[] = [
   {
-    title: 'GitHub Copilot',
-    description:
-      'Editor-native acceleration for implementation, local refactoring, API usage discovery, repetitive code paths, and code navigation during production feature work.',
-    icon: Sparkles,
-  },
-  {
     title: 'OpenAI Codex',
     description:
       'Repository-aware planning, implementation support, debugging, verification checklists, refactor decomposition, and review-ready change summaries.',
     icon: Bot,
   },
   {
-    title: 'Cloud Code',
+    title: 'GitHub Copilot',
     description:
-      'AI-assisted development loops for context gathering, implementation acceleration, codebase orientation, and multi-step engineering task breakdowns.',
-    icon: Braces,
+      'Editor-native acceleration for implementation, local refactoring, API usage discovery, repetitive code paths, and code navigation during production feature work.',
+    icon: Sparkles,
   },
   {
-    title: 'Gemini-based workflows',
+    title: 'Claude Code',
     description:
-      'Alternative model workflows for exploration, synthesis, architectural comparison, documentation review, and cross-checking technical assumptions.',
-    icon: BrainCircuit,
-  },
-  {
-    title: 'AI-assisted debugging',
-    description:
-      'Faster fault isolation, hypothesis generation, reproduction planning, log interpretation, and targeted validation while keeping final diagnosis human-owned.',
-    icon: Microscope,
-  },
-  {
-    title: 'Test scaffolding',
-    description:
-      'Initial test outlines, edge-case discovery, regression coverage prompts, fixture ideas, and risk-oriented test planning before final engineer review.',
-    icon: ClipboardList,
-  },
-  {
-    title: 'Refactoring support',
-    description:
-      'Safe decomposition ideas, naming review, maintainability checks, migration sequencing, and focused cleanup plans for legacy or complex UI code.',
+      'Agentic repository work for implementation, debugging, testing, documentation, and review preparation.',
     icon: CodeXml,
   },
   {
-    title: 'Documentation acceleration',
+    title: 'Cloud Code',
     description:
-      'Readable technical summaries, onboarding notes, implementation rationale, API behavior notes, and release-support documentation drafts.',
+      'AI-assisted development loops for context gathering, implementation acceleration, codebase orientation, and multi-step task breakdowns.',
+    icon: Braces,
+  },
+  {
+    title: 'Google Gemini',
+    description:
+      'Model-assisted research, technical synthesis, architectural comparison, and cross-checking of implementation assumptions.',
+    icon: BrainCircuit,
+  },
+  {
+    title: 'Google Antigravity',
+    description:
+      'Multi-step agent workflows for repository exploration, implementation planning, and human-reviewed execution.',
+    icon: Network,
+  },
+  {
+    title: 'Windsurf',
+    description:
+      'Editor-native assistance for code navigation, focused implementation, refactoring, and validation-oriented iteration.',
+    icon: Microscope,
+  },
+  {
+    title: 'OpenCode & OpenClaw',
+    description:
+      'Open agent workflows for tool orchestration, task decomposition, code changes, and structured delivery support.',
+    icon: ClipboardList,
+  },
+  {
+    title: 'Hermes Agent',
+    description:
+      'Agent-assisted local workflows for implementation, review preparation, diagnostics, and structured repository operations.',
     icon: FileText,
   },
   {
-    title: 'Code review preparation',
+    title: 'MCP & local LLM workflows',
     description:
-      'Diff summaries, risk checks, behavioral notes, reviewer context, and clearer explanation of implementation decisions before team review.',
+      'Tool-connected and local-model workflows for controlled research, automation, model routing, and human-reviewed engineering.',
     icon: GitPullRequestArrow,
-  },
-  {
-    title: 'Architecture exploration',
-    description:
-      'Tradeoff mapping, interface sketches, contract alternatives, migration options, and system-design exploration before committing to implementation.',
-    icon: Network,
   },
 ]
 

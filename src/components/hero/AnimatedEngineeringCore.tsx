@@ -31,13 +31,13 @@ const particleColors = [EMERALD, CYAN, AMBER, WHITE] as const satisfies readonly
 const nodes: SkillNode[] = [
   {
     title: 'AI-Assisted Engineering',
-    desc: 'AI tools & productivity',
+    desc: 'Human-reviewed delivery',
     icon: Sparkles,
     tone: EMERALD,
     angle: -100,
     ring: 1,
   },
-  { title: 'React', desc: 'Modern UI interfaces', icon: Code2, tone: CYAN, angle: -45, ring: 2 },
+  { title: 'React', desc: 'Complementary UI depth', icon: Code2, tone: CYAN, angle: -45, ring: 2 },
   {
     title: 'API Integration',
     desc: 'Systems & data',
@@ -55,16 +55,16 @@ const nodes: SkillNode[] = [
     ring: 2,
   },
   {
-    title: 'Enterprise Architecture',
-    desc: 'Scalable & secure',
+    title: 'Frontend Architecture',
+    desc: 'Modular & scalable',
     icon: Layers3,
     tone: CYAN,
     angle: 85,
     ring: 1,
   },
   {
-    title: 'Data-Driven Systems',
-    desc: 'Dashboards & analytics',
+    title: 'Data-Intensive UI',
+    desc: 'Grids & analytics',
     icon: Database,
     tone: EMERALD,
     angle: 135,

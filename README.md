@@ -14,6 +14,7 @@ npm run dev
 ## Quality Checks
 
 ```bash
+npm run test:content
 npm run typecheck
 npm run lint
 npm run build

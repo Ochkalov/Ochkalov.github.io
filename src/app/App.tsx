@@ -20,35 +20,35 @@ export default function App() {
         <ProfessionalBrief />
         <CapabilityHighlights />
       </Section>
-      <Section
-        id="impact"
-        title="How I Create Impact"
-        intro="General career impact themes across enterprise delivery, frontend architecture, API integration, product collaboration, and AI-assisted engineering."
-      >
-        <ImpactGrid />
-      </Section>
-      <Section
-        id="ai-fluency"
-        title="AI Fluency & Engineering Acceleration"
-        intro="AI-assisted engineering workflows are used to move faster without moving loosely."
-      >
-        <AIFluency />
-      </Section>
-      <Section id="skills" title="Technical Stack">
-        <TechStack />
-      </Section>
-      <Section
-        id="labs"
-        title="AI Engineering Labs"
-        intro="A collection of advanced R&D platforms exploring agentic research automation, leakage-proof model auditing, collaborative media pipelines, and structured knowledge graphs."
-      >
-        <AILabs />
-      </Section>
       <Section id="experience" title="Experience">
         <ExperienceTimeline />
       </Section>
       <Section id="projects" title="Featured Projects">
         <FeaturedProjects />
+      </Section>
+      <Section
+        id="impact"
+        title="How I Create Impact"
+        intro="Evidence from enterprise delivery, frontend architecture, API integration, and cross-team engineering."
+      >
+        <ImpactGrid />
+      </Section>
+      <Section id="skills" title="Technical Stack">
+        <TechStack />
+      </Section>
+      <Section
+        id="ai-fluency"
+        title="AI Fluency & Engineering Acceleration"
+        intro="Human-reviewed AI workflows for discovery, delivery, testing, and documentation."
+      >
+        <AIFluency />
+      </Section>
+      <Section
+        id="labs"
+        title="AI Engineering Labs"
+        intro="Public-safe technical case studies spanning agentic research, automation, full-stack systems, and knowledge tooling."
+      >
+        <AILabs />
       </Section>
       <Section id="education" title="Education">
         <EducationCard />

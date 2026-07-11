@@ -15,7 +15,7 @@ export const experience: ExperienceItem[] = [
     dates: 'Oct 2024 – Mar 2026',
     domain: 'Finance / Banking',
     context:
-      'Enterprise payments platform, modular frontend architecture, data-intensive workflows, and backend/API integration.',
+      'Enterprise payments platform built with Angular, TypeScript, RxJS, NgRx, Ag-Grid, Highcharts, micro-frontends, and Java/Spring Boot API integration.',
   },
   {
     company: 'EPAM Systems',
@@ -23,7 +23,8 @@ export const experience: ExperienceItem[] = [
     location: 'Remote → USA',
     dates: 'Oct 2019 – May 2024',
     domain: 'Finance, Retail, Warehouse Management, Healthcare',
-    context: 'Enterprise web, mobile, and full-stack delivery across multiple client domains.',
+    context:
+      'Enterprise Angular and React, mobile, and full-stack delivery across finance, retail, warehouse management, and healthcare, including data-intensive workflows with 200+ attributes.',
   },
   {
     company: 'Luxoft / DXC Technology',

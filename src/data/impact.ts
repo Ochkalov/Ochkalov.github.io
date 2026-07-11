@@ -49,10 +49,10 @@ export const heroMetrics: Metric[] = [
     icon: Boxes,
   },
   {
-    label: 'Attribute Workflows',
+    label: 'Data Attributes in Enterprise UI',
     value: 200,
     suffix: '+',
-    description: 'Large data-heavy enterprise UI workflows',
+    description: 'Verified data-intensive enterprise UI workflows',
     icon: DatabaseZap,
   },
   {
@@ -113,7 +113,7 @@ export const impactItems: ImpactItem[] = [
       'Built operational and analytical workflows with large datasets, server-side models, advanced filtering, drill-down behavior, custom rendering, visualizations, and URL-driven reproducible state.',
     icon: DatabaseZap,
     proofPoints: ['Server-side row model', 'Drill-down analysis', 'URL-driven state'],
-    metric: { value: 200, suffix: '+ attribute workflows' },
+    metric: { value: 200, suffix: '+ attributes' },
   },
   {
     title: 'Performance Modernization',
@@ -152,7 +152,7 @@ export const impactItems: ImpactItem[] = [
   {
     title: 'AI-Assisted Engineering',
     description:
-      'Applied GitHub Copilot, OpenAI Codex, Cloud Code, Gemini-based workflows, and agent-assisted development to accelerate delivery while preserving architecture ownership, human review, engineering judgment, and production quality.',
+      'Applied a multi-tool AI engineering stack including GitHub Copilot, OpenAI Codex, Claude Code, Cloud Code, Google Gemini, Google Antigravity, Windsurf, OpenCode, OpenClaw, Hermes Agent, MCP, and local LLM workflows while preserving architecture ownership, human review, engineering judgment, and production quality.',
     icon: BrainCircuit,
   },
   {
