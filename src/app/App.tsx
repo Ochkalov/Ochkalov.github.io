@@ -45,8 +45,8 @@ export default function App() {
       </Section>
       <Section
         id="labs"
-        title="AI Engineering Labs"
-        intro="Public-safe technical case studies spanning agentic research, automation, full-stack systems, and knowledge tooling."
+        title="Independent Engineering & AI Labs"
+        intro="Shipped hackathon products and public-safe technical case studies spanning deterministic systems, AI-assisted delivery, automation, and full-stack engineering."
       >
         <AILabs />
       </Section>

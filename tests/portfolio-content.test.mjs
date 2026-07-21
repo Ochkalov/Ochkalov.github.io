@@ -101,3 +101,25 @@ test('portfolio hierarchy makes evidence scannable before expanded labs', async 
   assert.match(labs, /useState\(false\)/)
   assert.doesNotMatch(header, /\bMenu\b/)
 })
+
+test('OpenAI Build Week case studies expose verified products, media, and engineering evidence', async () => {
+  const [data, showcase, labs] = await Promise.all([
+    readSource('src/data/hackathons.ts'),
+    readSource('src/components/labs/HackathonShowcase.tsx'),
+    readSource('src/components/labs/AILabs.tsx'),
+  ])
+
+  assert.match(data, /title: 'OpsProof'/)
+  assert.match(data, /title: 'RELAY\/\/ZERO'/)
+  assert.match(data, /OpenAI Build Week/)
+  assert.match(data, /https:\/\/opsproof\.yooint\.chatgpt\.site/)
+  assert.match(data, /https:\/\/relay-zero\.yooint\.chatgpt\.site/)
+  assert.match(data, /https:\/\/youtu\.be\/LPtDtNgJIrg/)
+  assert.match(data, /https:\/\/youtu\.be\/tntiVSlu58Q/)
+  assert.match(data, /100 fixed seeds/)
+  assert.match(data, /468 unit tests/)
+  assert.match(showcase, /<video/)
+  assert.match(showcase, /youtube-nocookie\.com\/embed/)
+  assert.match(showcase, /aria-label={`Watch \${project\.title} demo`}/)
+  assert.ok(labs.indexOf('<HackathonShowcase />') < labs.indexOf('labProjects.map'))
+})
