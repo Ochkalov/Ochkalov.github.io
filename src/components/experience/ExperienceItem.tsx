@@ -15,6 +15,19 @@ export function ExperienceItem({ item }: ExperienceItemProps) {
         <h3 className="text-lg font-semibold text-ink">{item.company}</h3>
         <p className="mt-1 text-sm font-medium text-cyan">{item.role}</p>
         <p className="mt-3 text-sm leading-6 text-muted">{item.context}</p>
+        {item.highlights?.length ? (
+          <ul className="mt-4 space-y-2 text-sm leading-6 text-muted/95">
+            {item.highlights.map((highlight) => (
+              <li key={highlight} className="flex gap-3">
+                <span
+                  className="mt-[0.65rem] size-1.5 shrink-0 rounded-full bg-emerald"
+                  aria-hidden="true"
+                />
+                <span>{highlight}</span>
+              </li>
+            ))}
+          </ul>
+        ) : null}
         <p className="mt-3 flex items-center gap-2 text-xs text-muted">
           <MapPin size={14} aria-hidden="true" />
           {item.location}

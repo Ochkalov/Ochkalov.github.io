@@ -26,6 +26,23 @@ test('experience and project copy retain the verified enterprise delivery signal
   assert.match(projects, /Getty Images/)
 })
 
+test('experience begins with current independent AI-first product development', async () => {
+  const [experience, item] = await Promise.all([
+    readSource('src/data/experience.ts'),
+    readSource('src/components/experience/ExperienceItem.tsx'),
+  ])
+
+  assert.ok(experience.indexOf("company: 'Independent'") < experience.indexOf("company: 'BNY Mellon'"))
+  assert.match(experience, /Senior Software Engineer \| AI-First Product Development/)
+  assert.match(experience, /Apr 2026 – Present/)
+  assert.match(experience, /OpsProof/)
+  assert.match(experience, /content automation pipelines/)
+  assert.match(experience, /tool-driven agent workflows/)
+  assert.match(experience, /deterministic simulation/)
+  assert.match(item, /item\.highlights\?\.length/)
+  assert.match(item, /item\.highlights\.map/)
+})
+
 test('AI tooling uses one expanded public toolchain across the site', async () => {
   const [tools, skills, impact] = await Promise.all([
     readSource('src/data/aiTools.ts'),
@@ -102,24 +119,45 @@ test('portfolio hierarchy makes evidence scannable before expanded labs', async 
   assert.doesNotMatch(header, /\bMenu\b/)
 })
 
-test('OpenAI Build Week case studies expose verified products, media, and engineering evidence', async () => {
-  const [data, showcase, labs] = await Promise.all([
-    readSource('src/data/hackathons.ts'),
-    readSource('src/components/labs/HackathonShowcase.tsx'),
+test('independent product case studies lead with professional positioning and focused media', async () => {
+  const [data, showcase, gallery, labs] = await Promise.all([
+    readSource('src/data/independentProjects.ts'),
+    readSource('src/components/labs/ProductShowcase.tsx'),
+    readSource('src/components/labs/ScreenshotGallery.tsx'),
     readSource('src/components/labs/AILabs.tsx'),
   ])
 
   assert.match(data, /title: 'OpsProof'/)
   assert.match(data, /title: 'RELAY\/\/ZERO'/)
-  assert.match(data, /OpenAI Build Week/)
+  assert.match(data, /Independent Product · Operations Decision Intelligence/)
+  assert.match(data, /OpenAI Build Week · 2D Browser Game/)
   assert.match(data, /https:\/\/opsproof\.yooint\.chatgpt\.site/)
   assert.match(data, /https:\/\/relay-zero\.yooint\.chatgpt\.site/)
-  assert.match(data, /https:\/\/youtu\.be\/LPtDtNgJIrg/)
-  assert.match(data, /https:\/\/youtu\.be\/tntiVSlu58Q/)
   assert.match(data, /100 fixed seeds/)
   assert.match(data, /468 unit tests/)
   assert.match(showcase, /<video/)
-  assert.match(showcase, /youtube-nocookie\.com\/embed/)
   assert.match(showcase, /aria-label={`Watch \${project\.title} demo`}/)
-  assert.ok(labs.indexOf('<HackathonShowcase />') < labs.indexOf('labProjects.map'))
+  assert.match(showcase, /<ScreenshotGallery/)
+  assert.match(showcase, /Selected independent products/)
+  assert.match(showcase, /Open live product/)
+  assert.match(showcase, /Play live game/)
+  assert.doesNotMatch(showcase, /jury demo/i)
+  assert.doesNotMatch(showcase, /project\.demoUrl/)
+  assert.doesNotMatch(showcase, /Built end to end for OpenAI Build Week/)
+  assert.doesNotMatch(data, /LPtDtNgJIrg/)
+  assert.doesNotMatch(data, /tntiVSlu58Q/)
+  assert.doesNotMatch(showcase, /youtube-nocookie/)
+  assert.match(data, /relay-zero-ricochet\.png/)
+  assert.match(data, /relay-zero-signal-core\.png/)
+  assert.match(data, /relay-zero-hound-chase\.png/)
+  assert.match(data, /relay-zero-extraction\.png/)
+  assert.match(gallery, /useState\(0\)/)
+  assert.match(gallery, /AnimatePresence/)
+  assert.match(gallery, /Previous screenshot/)
+  assert.match(gallery, /Next screenshot/)
+  assert.match(gallery, /aria-live="polite"/)
+  assert.match(gallery, /data-gallery-controls="top"/)
+  assert.doesNotMatch(gallery, /absolute inset-x-0 bottom-0/)
+  assert.doesNotMatch(gallery, /setInterval|autoplay/i)
+  assert.ok(labs.indexOf('<ProductShowcase />') < labs.indexOf('labProjects.map'))
 })

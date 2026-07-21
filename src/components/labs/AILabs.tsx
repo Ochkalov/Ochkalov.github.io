@@ -1,12 +1,12 @@
 import { motion } from 'motion/react'
 import { labProjects } from '../../data/labs'
 import { LabProjectCard } from './LabProjectCard'
-import { HackathonShowcase } from './HackathonShowcase'
+import { ProductShowcase } from './ProductShowcase'
 
 export function AILabs() {
   return (
     <>
-      <HackathonShowcase />
+      <ProductShowcase />
       <motion.div
         className="grid gap-4 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3"
         initial="hidden"

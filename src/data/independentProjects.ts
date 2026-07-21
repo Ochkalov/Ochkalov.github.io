@@ -1,4 +1,4 @@
-export interface HackathonProject {
+export interface IndependentProject {
   id: 'opsproof' | 'relay-zero'
   title: string
   category: string
@@ -7,17 +7,19 @@ export interface HackathonProject {
   signals: string[]
   tags: string[]
   liveUrl: string
-  demoUrl: string
   media:
     | { kind: 'local'; src: string; poster: string; duration: string }
-    | { kind: 'youtube'; videoId: string; poster: string; duration: string }
+    | {
+        kind: 'gallery'
+        images: Array<{ src: string; alt: string; caption: string }>
+      }
 }
 
-export const hackathonProjects: HackathonProject[] = [
+export const independentProjects: IndependentProject[] = [
   {
     id: 'opsproof',
     title: 'OpsProof',
-    category: 'OpenAI Build Week · Work & Productivity',
+    category: 'Independent Product · Operations Decision Intelligence',
     description:
       'A browser-first decision system that turns compatible operational event logs into a transparent simulation, stress-tests disruptions, and finds the lowest-cost tested recovery that restores an SLA—or refuses to invent a plan when the evidence is insufficient.',
     proof: [
@@ -28,7 +30,6 @@ export const hackathonProjects: HackathonProject[] = [
     signals: ['Deterministic engine', '100 fixed seeds', 'Local-first data'],
     tags: ['Next.js', 'TypeScript', 'Web Workers', 'Zod', 'Vitest', 'Playwright'],
     liveUrl: 'https://opsproof.yooint.chatgpt.site/',
-    demoUrl: 'https://youtu.be/LPtDtNgJIrg',
     media: {
       kind: 'local',
       src: 'media/opsproof-public-explainer.mp4',
@@ -39,7 +40,7 @@ export const hackathonProjects: HackathonProject[] = [
   {
     id: 'relay-zero',
     title: 'RELAY//ZERO',
-    category: 'OpenAI Build Week · Browser Game',
+    category: 'OpenAI Build Week · 2D Browser Game',
     description:
       'A handcrafted 2D cinematic stealth-action platformer built around one returning ricochet tool. The same Vector Blade controls light, sound, cameras, doors, enemy routes, sabotage, and the final lockdown escape.',
     proof: [
@@ -50,12 +51,30 @@ export const hackathonProjects: HackathonProject[] = [
     signals: ['One complete mission', '468 unit tests', 'Deterministic systems'],
     tags: ['Phaser 4', 'TypeScript', 'Vite', 'Vitest', 'Playwright', 'Web Audio'],
     liveUrl: 'https://relay-zero.yooint.chatgpt.site/',
-    demoUrl: 'https://youtu.be/tntiVSlu58Q',
     media: {
-      kind: 'youtube',
-      videoId: 'tntiVSlu58Q',
-      poster: 'media/relay-zero-demo-poster.png',
-      duration: 'Build Week demo',
+      kind: 'gallery',
+      images: [
+        {
+          src: 'media/relay-zero-ricochet.png',
+          alt: 'The Operative plans a Vector Blade ricochet route through the Outer Security Ring.',
+          caption: 'Vector Blade route planning',
+        },
+        {
+          src: 'media/relay-zero-signal-core.png',
+          alt: 'The Signal Core reaches full charge before the facility enters lockdown.',
+          caption: 'Signal Core at full charge',
+        },
+        {
+          src: 'media/relay-zero-hound-chase.png',
+          alt: 'The Operative faces the Tracker Hound during the lockdown escape.',
+          caption: 'Operative versus Tracker Hound',
+        },
+        {
+          src: 'media/relay-zero-extraction.png',
+          alt: 'The armored transport carries the Operative out after the final escape.',
+          caption: 'Extraction after lockdown',
+        },
+      ],
     },
   },
 ]
